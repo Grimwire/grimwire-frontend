@@ -34,7 +34,7 @@ function Home(props) {
 			<div className="pageCTA">
 				<div>
 					<h4>Expected Full Release:</h4>
-					<h3>February 2020</h3>
+					<h3>Spring 2020</h3>
 					<p>Welcome to GrimWire, beta version 0.9.1.</p>
 					<p>All features are almost completely developed, just a few finished touches & entering in all the information</p>
 					<p><Link to="/pages/help">We could use a TON of help</Link></p>

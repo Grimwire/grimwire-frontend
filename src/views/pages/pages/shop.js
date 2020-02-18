@@ -14,7 +14,7 @@ class Pages extends React.Component {
 
     linkCard = (item) => {
 
-        return <span style={{ display: "inline-block", width: '280px', margin: '10px 25px' }}>
+        return <div style={{ display: "block", width: '280px', margin: '10px 25px' }}>
             <a target="_blank" className="amazon-link"
                 href={`https://www.amazon.com/gp/product/${item.amazonId}/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=${item.amazonId}&linkCode=as2&tag=grimwire-20&linkId=${item.linkId}`}>
                 <h3>{item.title}</h3>
@@ -23,7 +23,7 @@ class Pages extends React.Component {
             </a>
             <img src={`//ir-na.amazon-adsystem.com/e/ir?t=grimwire-20&l=am2&o=1&a=${item.amazonId}`}
                 width="1" height="1" border="0" alt="" />
-        </span>
+        </div>
     }
 
     handleSelectionChange = (e) => {
@@ -67,13 +67,28 @@ class Pages extends React.Component {
                     <div>{
 
                         this.fauxDb().map(item => {
-                            const categoryPrint = item.category !== lastCategory ? <h2 className="shop-category">{item.category}</h2> : ""
+                            const categoryPrint = item.category !== lastCategory ?
+                                <h2 className="shop-category">{item.category}</h2> : null
+
                             lastCategory = item.category
-                            const show = this.state.filteredCategory === "-1" || this.state.filteredCategory === item.category
-                            return show ? <span>
-                                {categoryPrint}
-                                {this.linkCard(item)}
-                            </span> : null
+
+                            const show = categoryPrint
+                            if (show) {
+                                return <>
+                                    {categoryPrint}
+                                    <div style={{display:'flex', flexWrap: 'wrap'}}>
+                                    {
+
+                                        this.fauxDb().map(item2 => {
+                                            const show = item2.category === item.category
+                                            if (show) {
+                                                return this.linkCard(item2)
+                                            } else { return null }
+                                        })
+                                    }
+                                    </div>
+                                </>
+                            } else { return null }
                         })
 
                     }</div>
@@ -102,70 +117,70 @@ class Pages extends React.Component {
                 linkId: 'cf1ddd73b755db2e9213229c328ebbb4',
                 category: "Herbs",
                 title: "Spell Herb Sampler",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "A nice selection of herbs for the witch who needs to customize their use."
             },
             {
                 amazonId: 'B01D4064A2',
                 linkId: '282e779eba8c150297e0f573b844b875',
                 category: "Herbs",
                 title: "Deluxe Herb Sampler",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "For the experienced witch to get a little sampler."
             },
             {
                 amazonId: '1634241657',
                 linkId: '0910c38a01967cfd825b77e0a0c922a6',
                 category: "Books",
                 title: "Liber 420",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "A quality look at the history of cannabis in the occult."
             },
             {
                 amazonId: 'B00OAK9AN4',
                 linkId: '57f9c9defa44e708121e2d87bfddd596',
                 category: "Herbs",
                 title: "Beginner Herb Sampler",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "Just a few easy herbs for the absolute beginner."
             },
             {
                 amazonId: 'B07NXZMH6Y',
                 linkId: '6ea994e7133b76d2fb5fa14fbf54d591',
                 category: "Crystals",
                 title: "Beginner Crystal Set",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "A good decent crystals to get all your bases (and chakras... and more...) covered."
             },
             {
                 amazonId: 'B07WJHMWRQ',
                 linkId: 'f403e18bdde7468ab8fd2583cd38457c',
                 category: "Crystals",
                 title: "Healing Chakra Crystal Set",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "Basic crystal set for balance & grounding."
             },
             {
                 amazonId: 'B07BNJ76LM',
                 linkId: 'ec5011fcffdbee05441b2e9a2941cf1d',
                 category: "Crystals",
                 title: "Crystal Tree",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "A neat store that lets you choose the crystal you want on your tree."
             },
             {
                 amazonId: 'B07K8G35KQ',
                 linkId: 'adf498fe3ede9eab8f382a720306e020',
                 category: "Crystals",
                 title: "Set of Healing Wands",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "Basic set of quartz & amethyst for the very beginner."
             },
             {
                 amazonId: 'B01LXZUC1C',
                 linkId: '57f23ea27be4253c8f01e511cc59dd55',
                 category: "Crystals",
                 title: "Box of Crafting Crystals",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "A box of different small crystals for making your own crafts."
             },
             {
                 amazonId: 'B06ZYP2STH',
                 linkId: '2b6874cbc5f479092a0b437f1c4b1755',
                 category: "Crystals",
                 title: "Selenite Wand",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "A big selenite wand. 'Nuff said."
             },
             {
                 amazonId: 'B077HYJYSF',
@@ -179,91 +194,91 @@ class Pages extends React.Component {
                 linkId: '8d952b65e3f88a119ab5d4084cb125db',
                 category: "Crystals",
                 title: "Crystal Spell Sampler",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "A bunch of pendants to use how you'd like."
             },
             {
                 amazonId: 'B01HVOX9PA',
                 linkId: 'a236f5e5436ef18cb04147d26cb36332',
                 category: "Magickal Tools",
                 title: "Amethyst/Oak Magick Wand",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: ""
             },
             {
                 amazonId: 'B01DMX4XCM',
                 linkId: 'ab6b797a839eb865d921a4511cc6bba6',
                 category: "Magickal Tools",
                 title: "Silver/Quartz Chakra Wand",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: ""
             },
             {
                 amazonId: 'B07H4N7KMS',
                 linkId: '136b0866eb2f4765bb84eec7c960428c',
                 category: "Magickal Tools",
                 title: "Hematite/Angel Chakra Wand",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: ""
             },
             {
                 amazonId: 'B00WR1T4PW',
                 linkId: 'db4ea7b1bd7e1db196ac734c68708593',
                 category: "Journals",
                 title: "Leather Journal w/ Crystals",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: ""
             },
             {
                 amazonId: '1441310584',
                 linkId: '56b1200bb67aee896b598ae4083a6398',
                 category: "Journals",
                 title: "Black Hardcover Journal w/ Gold Trim",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: ""
             },
             {
                 amazonId: '0875421180',
                 linkId: 'b861e598fdcce036f13338398601fa45',
                 category: "Books",
                 title: "Wicca: Solitary Practictioner",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "A decent book with good material for operating without a coven."
             },
             {
                 amazonId: '0875420508',
                 linkId: '3581dda1ba9737fdfe5111792d017178',
                 category: "Books",
                 title: "Complete Witchcraft",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: ""
             },
             {
                 amazonId: '194677409X',
                 linkId: 'aa5d70e5f11fa5e04a33f3a0d163a2aa',
                 category: "Books",
                 title: "The Three Books of Solomon",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "The infamous book of demons."
             },
             {
                 amazonId: '0877282684',
                 linkId: '642501008abc2bc38a34f702e348f384',
                 category: "Books",
                 title: "Book of Thoth",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "The quintesstial book for understanding Kabbalah through tarot."
             },
             {
                 amazonId: '1438235720',
                 linkId: '6ad2933f103a2b7b4ace6be1b1873b22',
                 category: "Books",
                 title: "The Kybalion & The Emerald Tablets",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: "The origins of Hermeticism."
             },
             {
                 amazonId: '1912715473',
                 linkId: 'd81841d58bbde1134ccd253295f0f5e6',
                 category: "Books",
                 title: "Starter Wiccan Spellbook",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: ""
             },
             {
                 amazonId: '1507209142',
                 linkId: 'fa6a9a9cefb67c6fecb8418c525161e6',
                 category: "Books",
                 title: "Magickal Self Care",
-                description: "Something along the lines of something else and the store goes here up in the blank spot"
+                description: ""
             },
             {
                 amazonId: 'B074XFP27L',
