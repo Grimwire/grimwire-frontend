@@ -112,7 +112,6 @@ class Kinds extends React.Component {
                         : <div className="failedSearch">Sorry. There are no results for that term.</div>
                       )
                   }
-
               </div>
 
 

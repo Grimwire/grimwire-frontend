@@ -11,13 +11,11 @@
 /* CSS animations for pages & route changes, etc. */
 @import '/stylesheets/animations';
 
-
 /*---Page Components---*/
 /*Styling for menu*/
 @import '/stylesheets/menu';
 /*Styling that is used on every page.*/
 @import '/stylesheets/page';
-
 
 /*---Individual Components---*/
 @import '/stylesheets/components/homeLinks';
@@ -44,7 +42,7 @@
 	background-image: url($nightWoods);
 	background-size: cover;
 	background-attachment: fixed;
-	background-position:center;
+	background-position: center;
 }
 .main-screen {
 	background: linear-gradient(
@@ -55,7 +53,6 @@
 		rgba($dark-color, .9) 100%
 	);
 }
-
 
 .main-page {
 	background-color: rgba($secondary-color, .7);
@@ -79,8 +76,8 @@
 .footer {
 	background-color: $d-primary-color;
 	padding: 40px;
-	border-top:12px solid $l-primary-color;
-	border-bottom:12px solid $l-primary-color;
+	border-top: 12px solid $l-primary-color;
+	border-bottom: 12px solid $l-primary-color;
 }
 
 .modal-title {
@@ -90,13 +87,12 @@
 	color: $l-light-color;
 }
 
-
 .extra-info-slider {
 	background-color: rgba(white, .2);
 	padding: 30px;
-	display:block;
-	overflow:scroll;
-	min-width:100%;
+	display: block;
+	overflow: scroll;
+	min-width: 100%;
 }
 
 .extra-info-row {
@@ -124,8 +120,6 @@
 .handlerForm {
 	max-width: 800px;
 }
-
-
 
 .inlineForm {
 	.formField {
@@ -178,35 +172,33 @@
 }
 
 .connection-row {
-	background-color:$dark-color;
-	width:100vw;
-	margin:0;
+	background-color: $dark-color;
+	width: 100vw;
+	margin: 0;
 	& .col-12 {
-		padding:0;
+		padding: 0;
 		border-left: 2px solid $d-grey-color;
 		border-right: 2px solid $d-grey-color;
 	}
-
 }
 
 .symbol-connection-area {
-
-	background-color:$dark-color;
+	background-color: $dark-color;
 	& h3 {
-		background-color:$l-grey-color;
-		padding:10px;
-		color:$ll-light-color;
-		margin:0;
+		background-color: $l-grey-color;
+		padding: 10px;
+		color: $ll-light-color;
+		margin: 0;
 	}
 	& h4 {
-		background:$d-grey-color;
-		border-top:4px solid $grey-color;
-		border-bottom:4px solid $dd-grey-color;
-		margin:0;
+		background: $d-grey-color;
+		border-top: 4px solid $grey-color;
+		border-bottom: 4px solid $dd-grey-color;
+		margin: 0;
 		& a {
-			font-size:inherit;
-			background:none;
-			width:80%;
+			font-size: inherit;
+			background: none;
+			width: 80%;
 			color: $light-color;
 		}
 	}
@@ -216,25 +208,30 @@
 }
 
 .displayImage {
-	padding:20px;
-	background-color:$ll-primary-color;
-	h2 { color: $dd-primary-color;}
-	h3 { color: $d-primary-color;}
+	padding: 20px;
+	background-color: $ll-primary-color;
+	h2 {
+		color: $dd-primary-color;
+	}
+	h3 {
+		color: $d-primary-color;
+	}
 	& .displayImageHolder {
-		border:8px inset $l-grey-color;
+		border: 8px inset $l-grey-color;
 		width: min-content;
 		height: min-content;
-		margin:auto;
+		margin: auto;
 	}
 	@media only screen and (max-width: 911px) {
 		& .displayImageHolder {
-			overflow:scroll;
+			overflow: scroll;
 			max-width: 80vw;
-			max-height:200px;
-			margin:auto;
+			max-height: 200px;
+			margin: auto;
 			scrollbar-width: none; /* Firefox */
-			-ms-overflow-style: none;  /* Internet Explorer 10+ */
-			&::-webkit-scrollbar { /* WebKit */
+			-ms-overflow-style: none; /* Internet Explorer 10+ */
+			&::-webkit-scrollbar {
+				/* WebKit */
 				width: 0;
 				height: 0;
 			}
@@ -242,23 +239,93 @@
 	}
 }
 
-
 .user-list-card {
-	background:$dark-color;
-	padding:10px;
-	border-top:4px solid $l-dark-color;
+	background: $dark-color;
+	padding: 10px;
+	border-top: 4px solid $l-dark-color;
 	border-bottom: 4px solid $primary-color;
 }
 
 .faq-questions {
-	background:$dark-color;
+	background: $dark-color;
 	h3 {
-		background-color:$primary-color;
-		padding:20px;
-		margin:0;
+		background-color: $primary-color;
+		padding: 20px;
+		margin: 0;
 	}
-	h5 { text-decoration: none; }
-	.faq-answer{
-		padding:20px;
+	h5 {
+		text-decoration: none;
 	}
+	.faq-answer {
+		padding: 20px;
+	}
+}
+
+.categoryStyleName {
+	color: $light-color;
+	background-color: rgba($primary-color, .85);
+	padding: 10px;
+	min-height: 75px;
+	width:100%;
+}
+
+.categoryStyleText {
+	background-color: rgba($dark-color, .6);
+	padding: 10px 10px 35px;
+	min-height: 75px;
+	width:100%;
+}
+
+.categoryStyleLink:hover .categoryStyleName {
+	background-color: $primary-color;
+}
+
+.categoryStyleLink:hover .categoryStyleText {
+	background-color: rgba($dark-color, .9);
+}
+
+.categoryStyleLink, .categoryStyleLink:hover {
+	background-size: cover;
+	height: 400px;
+	background-position-x: center;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	border-bottom:4px solid $primary-color;
+}
+
+
+.kindStyleLink, .kindStyleLink:hover {
+	background-size: cover;
+	height:200px;
+	background-position-x: center center;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	border-bottom:4px solid $primary-color;
+}
+
+.kindStyleName {
+	color: $light-color;
+	background-color: rgba($primary-color, .85);
+	padding: 10px;
+	min-height: 40px;
+	width:100%;
+}
+
+.kindStyleText {
+	background-color: rgba($dark-color, .6);
+	padding: 10px 10px 35px;
+	min-height: 75px;
+	width:100%;
+}
+
+.kindStyleLink:hover .kindStyleName {
+	background-color: $primary-color;
+}
+
+.kindStyleLink:hover .kindStyleText {
+	background-color: rgba($dark-color, .9);
 }

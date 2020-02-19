@@ -1,6 +1,7 @@
 import React from 'react'
 import ListItemKindCard from '../cards/listItem'
 import {CSSTransition, SwitchTransition} from 'react-transition-group'
+import {Row, Col} from 'react-bootstrap'
 
 function SimpleKindList(props) {
     const style = {
@@ -11,9 +12,12 @@ function SimpleKindList(props) {
     return <SwitchTransition><CSSTransition key={renderKey}
       in={true} timeout={150} classNames="search-page" unmountOnExit>
       <div style={style} key={renderKey}>
+          
+      <Row>
         { props.kinds.map(item =>
-            <div><ListItemKindCard key={item.name} kind={item} /><hr /></div>
+            <Col lg={6}><ListItemKindCard key={item.name} kind={item} /></Col>
         )}
+        </Row>
     </div>
     </CSSTransition></SwitchTransition>
 }
