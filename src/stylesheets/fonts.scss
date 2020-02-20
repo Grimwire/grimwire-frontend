@@ -44,7 +44,6 @@ h4 {
 	font-size: 20px;
 }
 h5 {
-	@include h-tag;
-	font-size: 18px;
-	text-decoration: underline;
+	@include h-tag($font: $textFont);
+	font-size: 16px;
 }

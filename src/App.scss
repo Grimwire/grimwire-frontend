@@ -329,3 +329,42 @@
 .kindStyleLink:hover .kindStyleText {
 	background-color: rgba($dark-color, .9);
 }
+
+
+
+
+.pantheonStyleLink, .pantheonStyleLink:hover {
+	background-size: cover;
+	height:150px;
+	background-position-x: center center;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	border-bottom:4px solid $primary-color;
+	border-top:4px solid $primary-color;
+}
+
+.pantheonStyleName {
+	color: $light-color;
+	background-color: rgba($primary-color, .85);
+	padding: 10px;
+	height: 100%;
+	width:100%;
+}
+
+.pantheonStyleText {
+	background-color: rgba($dark-color, .6);
+	padding: 10px 10px 35px;
+	min-height: 75px;
+	width:100%;
+	height:100%;
+}
+
+.pantheonStyleLink:hover .pantheonStyleName {
+	background-color: $primary-color;
+}
+
+.pantheonStyleLink:hover .pantheonStyleText {
+	background-color: rgba($dark-color, .9);
+}
