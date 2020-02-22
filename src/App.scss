@@ -299,7 +299,7 @@
 .kindStyleLink, .kindStyleLink:hover {
 	background-size: cover;
 	height:200px;
-	background-position-x: center center;
+	background-position: center center;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
@@ -336,7 +336,7 @@
 .pantheonStyleLink, .pantheonStyleLink:hover {
 	background-size: cover;
 	height:150px;
-	background-position-x: center center;
+	background-position: center center;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
