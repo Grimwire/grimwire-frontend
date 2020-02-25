@@ -165,11 +165,11 @@ class FormHandler extends React.Component {
 
             </div>)}
 
-            { /* These are fields that are targeted by classForm */ }
+            { /* These are fields that are targeted by classForm }
             {
                 //This is a custom field for a symbol connections, which, if set, tells the backend to create an inverse "duplicate"
-                <DualConnectionField stateSettings={this.state} callback={this.toggleDuplicate} />
-            }
+                <DualConnectionField item={this.props.item} stateSettings={{...this.state, formClass: this.props.formClass}} callback={this.toggleDuplicate} />
+             */}
             { 
                 //BULK ADD is an admin feature that does not refresh the page/form on submit, allowing for much faster entry, reusing of form data
                 this.props.existing ? "" : 
@@ -257,7 +257,7 @@ class FormHandler extends React.Component {
     }
 
     toggleDuplicate = (e) => {
-        this.setState({ duplicateConnection: !this.state.duplicateConnection })
+        this.props.updateItem({ ...this.props.item, duplicateConnection: !this.props.item.duplicateConnection })
     }
     
     toggleBulkAdd = (e) => {
