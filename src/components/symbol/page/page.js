@@ -64,8 +64,7 @@ class SymbolPage extends React.Component {
     
         <Helmet>
                 <title>{`GrimWire.Online- ${item.symbol_name}- All About ${item.kind.kind_name}`}</title>
-                <meta property="og:image" content={item.thumbnail ? item.thumbnail.image_url : '/images/logo.png'} />
-                <meta property="og:type" content="article" />
+                <meta property="og:type" content="website" />
                 <meta property="og:title" content={item.symbol_name} />
                 <meta property="og:description" content={item.symbol_description} />
         </Helmet>
