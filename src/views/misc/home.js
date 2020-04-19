@@ -58,23 +58,27 @@ function Home(props) {
 			</div>
 
 			<div className="indexBar pageDarkSection">
-				<br className="d-none d-lg-block"/>
-				<br className="d-none d-lg-block"/>
-				<br className="d-none d-lg-block"/>
+				<br className="d-none d-lg-block" />
+				<br className="d-none d-lg-block" />
+				<br className="d-none d-lg-block" />
 				<Row>
-					<Col xs={12} lg={3}>
+					<Col xs={12} lg={4}>
 						<Link className="nice-button" to="/search/portal-of-chaos">Enter the Portal of Chaos</Link>
 						<p class="button-text">Jump to a page of random articles.</p>
 					</Col>
-					<Col xs={12} lg={3}>
+					<Col xs={12} lg={4}>
 						<Link className="nice-button" to="/pages/hall-of-initiates">Visit the Hall of Initiates</Link>
 						<p class="button-text">For beginners who don't know where to start.</p>
 					</Col>
-					<Col xs={12} lg={3}>
+					<Col xs={12} lg={4}>
+						<Link className="nice-button" to="/users/register">Create An Account</Link>
+						<p class="button-text">Support our mission by creating your account & joining the mailing list.</p>
+					</Col>
+					<Col xs={12} lg={6}>
 						<Link className="nice-button" to="/pages/mission">Our History</Link>
 						<p class="button-text">How we came about & who makes up our team.</p>
 					</Col>
-					<Col xs={12} lg={3}>
+					<Col xs={12} lg={6}>
 						<Link className="nice-button" to="/resources">External Resources</Link>
 						<p class="button-text">Our allies & other external resources.</p>
 					</Col>

@@ -26,13 +26,13 @@ class Profile extends React.Component {
     }
 
     render() {
-        return <div className='tpBlackBg'>
+        return <div className='tpBlackBg' style={{padding:'10px'}}>
             {
                 this.state.sent ?  "Please check your email for the link to reset your password. If you do not see it in a few minutes, check your spam folder." : <div>
-                <h2>Forgot Your Password?</h2>
+                <h2 style={{paddingTop:'30px'}}>Forgot Your Password?</h2>
                 <h4>Enter your username & we'll send you a link.</h4>
 
-                <Form onSubmit={this.submitForm} style={{width:"800px", margin:"auto"}}>
+                <Form onSubmit={this.submitForm} style={{margin:"auto"}}>
                     <Form.Group>
                         <Form.Label>Username</Form.Label>
                         <Form.Control

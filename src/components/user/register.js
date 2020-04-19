@@ -81,15 +81,14 @@ class LogIn extends React.Component {
 
 
     render() {
-        return <div className="tpBlackBg">
+        return <div className="tpBlackBg" style={{padding:'10px'}}>
             {this.state.sent ? "Thank you. Please go check your email for the verification link. If you do not see it within a few minutes, please check your spam folder." :
             <Form onSubmit={this.handleLogin} style={{maxWidth:"800px", width:"100%", margin:"auto", backgroundColor:this.state.formColor}}>
             
-            <h2>Create an Account</h2>
+            <h2 style={{paddingTop:'30px'}}>Create an Account</h2>
             <hr />
             <h4>Creating an account allows you to:</h4>
             <p>Sign up for notifications on the official & new releases</p>
-            <p>Edit & create articles & information</p>
             <h4>Coming Soon</h4>
             <p>Take private notes on each article</p>
             <p>Create spells & decide public or private individually</p>

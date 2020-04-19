@@ -68,7 +68,7 @@ class KindPage extends React.Component {
             { curr_user ?  <span><Link to="/collections/new">Create Collection</Link> 
             <Link to={`/collections/${item.kind_id}/edit`}>Edit This Collection</Link> 
             <Link to={`/symbols/new?symbol_kind_id=${item.kind_id}`}>New Symbol</Link></span> : "" }
-            <Link to="/collections">Back to Collections</Link>
+            <Link to="/collections"><span className="fas fa-caret-left"></span> Back to All Collections</Link>
 
             {item.kindSymbolConnections.length > 0 ? 
                 <div>This article is a list of {item.kind_name}. </div> : ""}
@@ -80,7 +80,7 @@ class KindPage extends React.Component {
             }
 
             <BasicInfo item={item}>
-              <ImageGallery item={item} key={item.kind_ids}/>
+              {/*<ImageGallery item={item} key={item.kind_ids}/>*/}
             </BasicInfo>
 
             <SymbolList item={item} updatePage={this.updatePage} />

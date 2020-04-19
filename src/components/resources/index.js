@@ -6,7 +6,7 @@ import {Form, Row, Col} from 'react-bootstrap'
 import Pagination from '../shared/pagination'
 
 
-const curr_user = localStorage.user ?  JSON.parse(localStorage.user) : false
+const curr_user = localStorage.user ?  JSON.parse(localStorage.user) : {}
 const headers = { headers: {'authorization': localStorage.token} }
 
 class ResourcesIndex extends React.Component {
@@ -86,9 +86,10 @@ class ResourcesIndex extends React.Component {
 
   render() {
       return <div>
-        <h1>External Resources</h1>
+        <h1 style={{paddingTop:'30px'}}>External Resources</h1>
+        <h3>These are resources & friends who we vouch for & verify.</h3>
         {/*tag cloud
-        //type radio*/}
+        //type radio
         <Form>
           <input className="page-field" type='text' onChange={this.handleChange} type="text"
                 name="search" placeholder="Search by name"
@@ -96,29 +97,31 @@ class ResourcesIndex extends React.Component {
 
             {this.state.tag !== '' ? <p className="format-link" onClick={this.clearTag}>Clear Tag</p> : "" }
             
-        </Form>
-        <hr />
+        </Form>*/}
+        <div className="divider"></div>
+        <div className="pageDarkSection">
         <Pagination pages={this.state.pager.pages} callback={this.goToPage} currentPage={this.state.pager.currentPage} totalPages={this.state.pager.totalPages} />
         <hr/>
         <Row>
         {
-          this.state.resources.map((resource) => <Col lg="4" style={{height: '275px'}}><div style={{height: '275px'}}>
+          this.state.resources.map((resource) => <Col lg="4"><div>
             <h3>{resource.resource_title}</h3>
             <a href={`${resource.resource_link}`}>{resource.resource_type} Link</a>
             <p>{resource.resource_description}</p>
             <p>Tags: { (resource.resource_tags || []).map((tag) => <span className="format-link" onClick={this.setTag} data-tag={tag} style={{padding:'5px'}}>{tag}</span> ) }</p>
 
-            { curr_user.user_role > 1 ? <Link to={`/resources/${resource.resource_id}/edit`}>Edit</Link> : ""}
-            
+            { curr_user && curr_user.user_role > 1 ? <Link to={`/resources/${resource.resource_id}/edit`}>Edit</Link> : ""}
+            <hr />
           </div></Col>)
 
         }
         </Row>
         <hr/>
         <Pagination pages={this.state.pager.pages} callback={this.goToPage} currentPage={this.state.pager.currentPage} totalPages={this.state.pager.totalPages} />
-        <hr />
-
-        { curr_user.user_role > 1 ? <Link className='nice-button' to={`/resources/new`}>(+) Add A Resource</Link> : ""}
+        
+        </div>
+        <div className="reverse-divider"></div>
+        { curr_user && curr_user.user_role > 1 ? <Link className='nice-button' to={`/resources/new`}>(+) Add A Resource</Link> : ""}
 
         
       </div>

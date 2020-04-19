@@ -42,10 +42,31 @@ class Pages extends React.Component {
                     <div className="text-container">
                         <h3>Choose your wares... if you dare.</h3>
                         <br /><h1>The Crossroads</h1><br />
+                        <p>We are nonprofit, but money still... exists.</p>
                         <p>We offer links to places around the web that have the materials & supplies you need.</p>
                         <p>We try to find the best quality products, with great reviews, while remaining affordable.</p>
                         <p>We do make commission from any sales, so if you are already buying supplies, you can look here to help support us at the same time.</p>
-                        <br />
+                        <p>In fact, the first few listings are directly from us, our Etsy Shop.</p>
+                        <div className="divider"></div>
+                        <h3>Again, all links will open in a new page.</h3>
+                        <div className="reverse-divider"></div>
+                        
+                    </div>
+
+
+                    <div style={{padding:'0 10px'}}>
+                        <h2 className="shop-category">Starter Magick Items</h2>
+                       {this.etsyDb().map(item => {
+                           return <a href={item.link} target="_blank" className="blockLink">
+                               <img src={item.img} style={{width:'100%'}} />
+                               <h3>{item.title}</h3>
+                               <p>{item.description}</p>
+                           </a>
+                       })}                 
+
+                    </div>
+                    
+                    {/*<br />
                         <div style={{ margin: '10px', maxWidth: '400px', margin: "auto" }}>
                             <Form>
                                 <Form.Group>
@@ -61,20 +82,7 @@ class Pages extends React.Component {
                                     </Form.Control>
                                 </Form.Group>
                             </Form>
-                        </div>
-                    </div>
-
-
-                    <div style={{padding:'0 10px'}}>
-                       {this.etsyDb().map(item => {
-                           return <a href={item.link} target="_blank" className="blockLink">
-                               <img src={item.img} style={{width:'100%'}} />
-                               <h3>{item.title}</h3>
-                               <p>{item.description}</p>
-                           </a>
-                       })}                 
-
-                    </div>
+                                    </div>*/}
                     <div>{
 
                         this.fauxDb().map(item => {

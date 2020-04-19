@@ -76,7 +76,7 @@ class CategoryPage extends React.Component {
 						) : (
 								''
 							)}
-						<Link to="/categories/">Back to All Categories</Link>
+						<Link to="/categories/"><span className="fas fa-caret-left"></span> Back to All Categories</Link>
 
 						<br />
 						<br />
@@ -86,19 +86,19 @@ class CategoryPage extends React.Component {
 							<h1>
 								{item.category_name} {item.category_number}
 							</h1>
-							<img
+							{/*<img
 								src={item.thumbnail ? item.thumbnail.image_url : ''}
 								alt={item.pantheon_name}
 								width="250px"
-							/>
-							<p>{item.category_description || 'Please fill in.'}</p>
+							/>*/}
+							<p>{item.category_description || 'Coming Soon'}</p>
 						</div>
 						<div className="reverse-divider" />
 
 						<div className="text-container">
 							<Row>
 								<Col lg={4}>
-									<h3>Study Lists</h3>
+									{item.kinds.length > 0 ? <h3>Study Lists</h3> : "" }
 
 									{item.kinds ? (
 										item.kinds.map((i) => (
@@ -143,9 +143,10 @@ class CategoryPage extends React.Component {
 							</Row>
 						</div>
 
-
-						<TextOutput text={item.category_overview_text} title={'Overview'} />
-						<TextOutput text={item.category_sources_text} title={'Getting Started'} />
+						{item.category_overview_text ? 
+						<TextOutput text={item.category_overview_text} title={'Overview'} /> : "" }
+						{item.category_overview_text ? 
+						<TextOutput text={item.category_sources_text} title={'Getting Started'} /> : "" }
 
 						<Sources item={item} />
 

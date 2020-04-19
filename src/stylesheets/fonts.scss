@@ -40,7 +40,7 @@ h3 {
 	font-size: 22px;
 }
 h4 {
-	@include h-tag($color: $l-primary-color);
+	@include h-tag($color: $ll-primary-color);
 	font-size: 20px;
 }
 h5 {

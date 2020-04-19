@@ -26,10 +26,10 @@ class BasicInfo extends React.Component {
     return <div>
       <Row>
           <Col xs='12'>
-              <img src={item.thumbnail ? item.thumbnail.image_url : require('../../../img/logo.png')}  alt={item.pantheon_name} width="100px"/>
+              {/*<img src={item.thumbnail ? item.thumbnail.image_url : require('../../../img/logo.png')}  alt={item.pantheon_name} width="100px"/>*/}
               <h1>{item.pantheon_name}</h1>
               <p>{ this.yearRange(item) }</p>
-              <p>{item.pantheon_description || "Please fill in."}</p>
+              <p>{item.pantheon_description || "Coming soon"}</p>
               {this.props.children}
           </Col>
       </Row>

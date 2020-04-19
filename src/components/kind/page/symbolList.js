@@ -104,7 +104,6 @@ class BasicInfo extends React.Component {
               {this.state.sort === entry[0] ? (this.state.sortdir > 0 ? <i class="far fa-caret-square-up"></i> : <i class="far fa-caret-square-down"></i>) : ""}
             </td>) : ""}
 
-          <td className="extra-info-column">Thumbnail</td>
         </tr>
 
 

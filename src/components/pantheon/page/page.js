@@ -65,41 +65,38 @@ class PantheonPage extends React.Component {
 				>
 					{typeof item !== 'undefined' && Object.keys(item).length > 0 && !this.state.loading ? (
 						<div>
+							<Helmet>
+								<title>{`GrimWire.Online- ${item.pantheon_name}- The History of ${item.pantheon_name}`}</title>
+							</Helmet>
 
-
-			<Helmet>
-                <title>{`GrimWire.Online- ${item.pantheon_name}- The History of ${item.pantheon_name}`}</title>
-        </Helmet>
-
-
-
-							<Link to="/pantheons">Back to Pantheons</Link>{' '}{curr_user ? (
-									<span>
-										<Link to="/pantheons/new">Create Pantheon</Link>
-										<Link to={`/pantheons/${item.pantheon_id}/edit`}>Edit This Pantheon</Link>
-										<Link to={`/collections/new?creator_pantheon_id=${item.pantheon_id}`}>
-											Add a New Collection
+							<Link to="/pantheons"><span className="fas fa-caret-left"></span> Back to All Pantheons</Link>{' '}
+							{curr_user ? (
+								<span>
+									<Link to="/pantheons/new">Create Pantheon</Link>
+									<Link to={`/pantheons/${item.pantheon_id}/edit`}>Edit This Pantheon</Link>
+									<Link to={`/collections/new?creator_pantheon_id=${item.pantheon_id}`}>
+										Add a New Collection
 										</Link>
-									</span>
-								) : (
+								</span>
+							) : (
 									''
 								)}
 							<br /><br />
 							<div className="divider" />
 							<div className="text-container">
-							<BasicInfo item={item} />
+								<BasicInfo item={item} />
 							</div>
-							
+
 							<div className="reverse-divider" />
-							
-							
+
+
 							<div className="text-container">
-							<History item={item} />
-							<Collections item={item} />
+								<History item={item} />
+								<Collections item={item} />
 							</div>
-							
-							<ImageGallery item={item} key={item.pantheon_id} />
-							
+								{/*
+							<ImageGallery item={item} key={item.pantheon_id} />*/}
+
 							<TextOutput text={item.pantheon_overview_text} title={'Overview'} />
 							<TextOutput text={item.pantheon_history_text} title={'History & Background'} />
 							<TextOutput text={item.pantheon_culture_text} title={'Culture & Advancements'} />
@@ -111,8 +108,8 @@ class PantheonPage extends React.Component {
 							<img className="loaderImg" src={require('../../../img/yyloader.gif')} />
 						</div>
 					) : (
-						<div className="failedSearch">Sorry, there was an error. This page does not exist.</div>
-					)}
+								<div className="failedSearch">Sorry, there was an error. This page does not exist.</div>
+							)}
 				</CSSTransition>
 			</SwitchTransition>
 		);

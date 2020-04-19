@@ -40,9 +40,9 @@ class BasicInfo extends React.Component {
               <td className="extra-info-column" key={entry[0]}> {  symbol.extra_info[entry[0]] } </td>
           ) : ""}
 
-        <td className="extra-info-column">
+        {/*<td className="extra-info-column">
           <ImageModal item={symbol} size={'32px'} />
-        </td>
+        </td>*/}
 
 
         <td className="extra-info-column"><button onClick={this.toggleForm}>{this.state.showForm ? "Done" : "Edit" }</button></td>

@@ -24,7 +24,7 @@ class BasicInfo extends React.Component {
     
     
       <div className="text-container">
-      {item.thumbnail ? <img src={item.thumbnail.image_url} alt={item.kind_name} height="100px" /> : ""}
+      {false ? <img src={item.thumbnail.image_url} alt={item.kind_name} height="100px" /> : ""}
       <h1>{item.kind_name}</h1>
       {item.health_warning ? <h3 className="health-warning">WARNING: {item.health_warning}</h3> : ""}
 
@@ -36,14 +36,14 @@ class BasicInfo extends React.Component {
         <h3>Created</h3>
         <Link to={`/pantheons/${item.pantheon_id}`}>{item.pantheon_name}</Link>
 
-        {item.pantheons ? <div>
+        {item.pantheons.length > 0 ? <div>
           <h3>Uses</h3>
           {item.pantheons.map(i =>
             <Link key={i.pantheon_id} to={`/pantheons/${i.pantheon_id}`}>{console.log(i)}{i.pantheon_name}</Link>
           )}
         </div> : ""}
 
-        <h3>Classes & Categories</h3>
+        {item.categories.length > 0 ? <h3>Classes & Categories</h3> : ""}
         {item.categories.map(category => <div>
           <Link to={`/categories/${category.category_id}`}>{category.category_name} {category.category_number}</Link>
         </div>)}
