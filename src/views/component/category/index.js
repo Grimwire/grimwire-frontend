@@ -18,13 +18,11 @@ class Category extends React.Component {
     const curr_user = localStorage.user ?  JSON.parse(localStorage.user) : false
   return (<SwitchTransition><CSSTransition key={`categories`}
     in={true} timeout={350} classNames="whole-page" unmountOnExit appear enter exit><div className="">
-    <div key='categories' className="pageCTA">
+    <div key='categories' className="midCTA">
         <div className="container">
-          <h4>Our Collections compiled into convenient...</h4>
-          <h1>Categories</h1>
-          <h5>Our categories are an attempt at cataloging which collections are useful in which scenarios.</h5>
-          <h3>We have categories for Philosophy 101, Introduction to Wicca, Mythology 101, and Divination, among others.</h3>
-          <h6>Find your starting point below!</h6>
+          <h4>Making finding related information easier.</h4>
+          <h1>Categories & Classes</h1>
+          <h5>Conveinient categories combined to make complete topics easier to see all at once.</h5>
 
                         { curr_user ?  <Link to="/categories/new">+ Create New Category</Link> : "" }
         </div>

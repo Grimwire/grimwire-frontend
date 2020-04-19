@@ -8,16 +8,11 @@
 //linkTo- dynamic linking set in topMenu.js
 //links- sets the dropdown
 
-export default  [
-    {name: "Encyclopedia", view: "all", symbol: "search", links: [
-        {name: "Religions & Cultures", view: "all", link: '/pantheons', symbol: "place-of-worship"},
-        {name: "Classes & Categories", view: "all", link: '/categories', symbol: "book"},
-        {name: "Lists & Collections", view: "all", link: '/collections', symbol: "list"},
-        {name: "Search Symbols", view: "all", link: '/symbols', symbol: "search-plus"},
-        {name: "External Resources", view: "all", link: '/resources', symbol: 'atlas'},
-        {name: "Shop & Supplies", view: "all", link: '/pages/shop', symbol: 'gem'},
-    ]},
-    {name: "About", view: "all", symbol: "info-circle", links: [
+export default  [,
+    {name: "Search", view: "all", link: '/search', symbol: "search"},
+    {name: "Portal of Chaos", view: "all", link: '/search/portal-of-chaos', symbol: "question"},
+    {name: "For Beginners", view: "all", link: '/pages/hall-of-initiates', symbol: "star"},
+    {name: "About Us", view: "all", symbol: "info-circle", links: [
         {name: "Our Mission", view: "all", link: '/pages/mission', symbol: "bullseye"},
         {name: "Site Rules & Guidelines", view: "all", link: '/pages/magick-statement', symbol: "asterisk"},
         {name: "FAQ", view: "all", link: '/pages/questions', symbol: "question"},
@@ -25,6 +20,14 @@ export default  [
         {name: "Help Us Out", view: "all", link: '/pages/help', symbol: "exclamation"},
         {name: "Features", view: "all", link: '/pages/features', symbol: 'star'},
     ]},
+    {name: "Browse", view: "all", symbol: "search", links: [
+        {name: "Paths & Traditions", view: "all", link: '/pantheons', symbol: "place-of-worship"},
+        {name: "Categories", view: "all", link: '/categories', symbol: "book"},
+        {name: "Lists & Collections", view: "all", link: '/collections', symbol: "list"},
+        {name: "All Individual Items", view: "all", link: '/symbols', symbol: "search-plus"},
+        {name: "External Resources", view: "all", link: '/resources', symbol: 'atlas'},
+    ]},
+    {name: "Shop & Supplies", view: "all", link: '/pages/shop', symbol: 'gem'},
     {name: "Account", view: "no_user", symbol: "user", links: [
         {name: "Register", view: "all", link: '/users/register', symbol: ""},
         {name: "Login", view: "all", link: '/users/login', symbol: ""},
@@ -38,7 +41,7 @@ export default  [
         {name: "Logs", view: 'admin', link: '/admin/logs', symbol: "cogs"},
         {name: "Feedback", view: 'admin', link: '/feedback', symbol: "comments"},
         {name: "Logout", view: 'all', link: '/users/logout', symbol: "sign-out-alt"}
-    ]}
+    ]},
 ]
 
 

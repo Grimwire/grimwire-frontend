@@ -14,11 +14,12 @@ class Pages extends React.Component {
 
     linkCard = (item) => {
 
-        return <div style={{ display: "block", width: '280px', margin: '10px 25px' }}>
+        return <div style={{ display: "block", width: '100%', margin: '10px 25px' }}>
             <a target="_blank" className="amazon-link"
                 href={`https://www.amazon.com/gp/product/${item.amazonId}/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=${item.amazonId}&linkCode=as2&tag=grimwire-20&linkId=${item.linkId}`}>
+                <img border="0" src={`//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=${item.amazonId}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=grimwire-20`} style={{maxHeight:'300px'}} />
+                
                 <h3>{item.title}</h3>
-                <img border="0" src={`//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=${item.amazonId}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=grimwire-20`} />
                 <p>{item.description}</p>
             </a>
             <img src={`//ir-na.amazon-adsystem.com/e/ir?t=grimwire-20&l=am2&o=1&a=${item.amazonId}`}
@@ -64,6 +65,16 @@ class Pages extends React.Component {
                     </div>
 
 
+                    <div style={{padding:'0 10px'}}>
+                       {this.etsyDb().map(item => {
+                           return <a href={item.link} target="_blank" className="blockLink">
+                               <img src={item.img} style={{width:'100%'}} />
+                               <h3>{item.title}</h3>
+                               <p>{item.description}</p>
+                           </a>
+                       })}                 
+
+                    </div>
                     <div>{
 
                         this.fauxDb().map(item => {
@@ -108,6 +119,41 @@ class Pages extends React.Component {
             }
         })
         return categoryList
+    }
+
+    etsyDb = () => {
+        return [{
+            img: "https://i.etsystatic.com/11046379/r/il/5d4f18/2251814292/il_794xN.2251814292_ahmq.jpg",
+            link: "https://www.etsy.com/listing/777957724/witchy-starter-kits-mini-wiccan-altar-11",
+            title: "Witchy Starter Kits- Mini Wiccan Altar, 11 Types of Crystals, & 3 Types of Spellwork, AND MORE",
+            description: "Little Witch Starter Kits! I bet you've never seen a deal like this before!! 14 Items Included to Get You Started On Your Journey!!"
+        },{
+            img: "https://i.etsystatic.com/11046379/r/il/5ac1a2/2248071764/il_fullxfull.2248071764_ezvz.jpg",
+            link: "https://www.etsy.com/listing/777955020/hand-polished-selenite-wands-and-resin",
+            title: "Hand Polished Selenite Wands and Resin Gem Charging Board",
+            description: "Selenite has the power of protection. You can use these beautiful wrapped wands to cast a calming circle around your space or meditate to get in touch with yourself. Plus, they even come with a specialized resin gem charging station. These hand polished Selenite and hemp wrapped wands will add a uniqueness to your Altar you can't deny."
+        },{
+            img: "https://i.etsystatic.com/11046379/r/il/81c7b3/2248090846/il_794xN.2248090846_5tds.jpg",
+            link: "https://www.etsy.com/listing/791834115/mini-crystal-altar-boards",
+            title: "Mini Crystal Altar Boards",
+            description: "These adorable Mini Crystal Altar Boards are just the addition to your collection you need."
+        },{
+            img: "https://i.etsystatic.com/11046379/r/il/3dab9f/2295693557/il_794xN.2295693557_micr.jpg",
+            link: "https://www.etsy.com/listing/791830497/witchcraft-spell-kits-everything-needed",
+            title: "Witchcraft Spell Kits- Everything Needed To Do Your Own",
+            description: "Want to do a specific spell yourself, but don't have the ingredients? These Little Pre-Made Spell Kits are just what you are looking for!"
+        },{
+            img: "https://i.etsystatic.com/11046379/r/il/9607ec/2203638498/il_794xN.2203638498_4z81.jpg",
+            link: "https://www.etsy.com/listing/767679566/real-crystal-chakra-charging-bags-set",
+            title: "Real Crystal Chakra Charging Bags Set- 1lb+ Total Crystals",
+            description: "These are carefully selected crystals that correspond with all 7 of the chakras. Starting with the Root all the way to the Crown these tiny crystals are packed full of charges to help you unlock the purest energies with in."
+        },{
+            img: "https://i.etsystatic.com/11046379/r/il/64ce22/2304641497/il_794xN.2304641497_siah.jpg",
+            link: "https://www.etsy.com/listing/781707307/astrology-crystal-bag-real-crystals-for",
+            title: "Astrology Crystal Bag- Real Crystals for your Signs",
+            description: "Ever wish you had just the perfect crystals based on your Zodiac sign... Well you are in luck! We have the perfect little crystal set for you."
+        },
+        ]
     }
 
     fauxDb = () => {

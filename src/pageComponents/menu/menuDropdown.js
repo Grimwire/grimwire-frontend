@@ -33,11 +33,13 @@ class Menu extends React.Component {
 
     return <span className="hmenu-item hmenu-dropdown">
       <div className={`hmenu-dropdown-toggle hdt-${item.name}`} onClick={this.toggleMenu}>
-        <span className={`hmenu-dropdown-toggle hdt-${this.props.item.name} fas fa-${item.symbol} `}></span> 
         {item.name} 
+        <span>
         <span className={`hmenu-dropdown-toggle hdt-${this.props.item.name} fas fa-caret-${this.state.showMenu ? 'down' : 'up'} `}></span>
+        &nbsp;
+        <span className={`hmenu-dropdown-toggle hdt-${this.props.item.name} fas fa-${item.symbol} `}></span> 
+        </span>
       </div>
-      <br />
       <CSSTransition in={showMenu} timeout={100} classNames="menu-fade">
         <div className="hmenu-dropdown-options" style={{ display: (showMenu ? 'block' : 'none') }}>
           {item.links.map(subitem => 

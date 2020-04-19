@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Kinds from '../../../components/kind/index/index'
+import AllRandom from '../../../components/all/index/random'
 import FormInsert from '../../../components/forms/handler'
 import {defaultKind} from '../../../db/defaultObjects'
 import {Link} from 'react-router-dom'
@@ -20,17 +20,14 @@ class Kind extends React.Component {
     in={true} timeout={350} classNames="whole-page" unmountOnExit appear enter exit><div className="">
     <div key='kinds' className="midCTA">
         <div className="container">
-          <h4>Tarot Cards, Astrology Signs, Planetary Energies, Crystals</h4>
-          <h1>Lists & Collections</h1>
-          <h5>For a starting seeker, there are so many things to memorize and learn.</h5>
-          <h5>These are the endless lists on lists of collections.</h5>
-
-                        { curr_user ?  <Link to="/collections/new">+ Create New Collection</Link> : "" }
+          <h2>The Portal<br />Of Chaos</h2>
+          <h6>A few random pages from our database.</h6>
+          <a href="" className="nice-button" to="/search/portal-of-chaos">Re-Enter The Portal</a> 
         </div>
       </div>
       <div className="divider"></div>
       <div className="pageDarkSection">
-      <Kinds />
+      <AllRandom />
       </div>
       <div className="reverse-divider"></div>
 

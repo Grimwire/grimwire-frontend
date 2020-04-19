@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Kinds from '../../../components/kind/index/index'
+import Kinds from '../../../components/all/index/index'
 import FormInsert from '../../../components/forms/handler'
 import {defaultKind} from '../../../db/defaultObjects'
 import {Link} from 'react-router-dom'
@@ -18,14 +18,14 @@ class Kind extends React.Component {
     const curr_user = localStorage.user ?  JSON.parse(localStorage.user) : false
   return (<SwitchTransition><CSSTransition key={`kinds`}
     in={true} timeout={350} classNames="whole-page" unmountOnExit appear enter exit><div className="">
-    <div key='kinds' className="midCTA">
+    <div key='kinds' className="lowCTA">
         <div className="container">
-          <h4>Tarot Cards, Astrology Signs, Planetary Energies, Crystals</h4>
-          <h1>Lists & Collections</h1>
-          <h5>For a starting seeker, there are so many things to memorize and learn.</h5>
-          <h5>These are the endless lists on lists of collections.</h5>
-
-                        { curr_user ?  <Link to="/collections/new">+ Create New Collection</Link> : "" }
+				  <Link className="" to="/search/portal-of-chaos">Or... Try Some Random Pages Instead?</Link>
+          <h2>Search GrimWire</h2>
+					<p>What's your astrological sign?</p>
+					<p>What's your favorite crystal?</p>
+					<p>What deity are you curious about?</p>
+					<p>What kind of spell do you want to make?</p>
         </div>
       </div>
       <div className="divider"></div>

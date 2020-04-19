@@ -13,7 +13,9 @@ function SmallPantheonCard(props) {
 
             <h5>{item.kind_name}</h5>
             <h3>{ item.symbol_name }</h3>
-            <h6>{item.symbol_description ? item.symbol_description : ""}</h6>
+            <h6>
+                        {item.symbol_description ? item.symbol_description.substr(0, 128) : "Coming Soon"} {item.symbol_description && item.symbol_description.length > 128 ? <span>... [Read More]</span> : ""}
+</h6>
     </Link></div>
 }
 

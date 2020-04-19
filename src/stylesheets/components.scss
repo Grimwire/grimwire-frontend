@@ -16,12 +16,12 @@ button {
 .nice-button {
 	display: inline-block;
 	color: $l-light-color;
-	padding: 20px;
+	padding: 10px;
 	line-height:1.2;
-	border: 8px solid $l-grey-color;
-	font-size: 28px;
+	border: 4px solid $l-grey-color;
+	font-size: 22px;
 	font-family: $headerFont;
-	background: linear-gradient(rgba($l-secondary-color, .2), rgba($d-secondary-color, .2));
+	background: linear-gradient($l-highlight-color, $d-highlight-color);
 	@media only screen and (max-width: 911px) {
 		width: 90%;
 		margin: 10px auto;
@@ -30,6 +30,11 @@ button {
 		width: 350px;
 		margin: 10px 25px;
 	}
+}
+
+.button-text {
+	margin-top:-8px;
+	font-style:italic;
 }
 
 .nice-button-primary {
@@ -76,6 +81,20 @@ a, .format-link {
 	}
 }
 
+.social-media {
+	width:180px;
+	background:linear-gradient(rgba(black, .2), rgba(white, .2));
+	border-radius:20px;
+	a {
+		background:none;
+		padding:4px 6px;
+		span{
+			font-size:20px;
+			color:$l-secondary-color;
+		}
+	}
+}
+
 .blockLink {
 	display: block;
 	padding: 15px;
@@ -112,6 +131,7 @@ hr {
 	background-color: $dividerColor;
 	border-top: 3px solid $l-dividerColor;
 	border-bottom: 3px solid $d-dividerColor;
+	position:relative;
 }
 
 .reverse-divider {
@@ -120,6 +140,23 @@ hr {
 	background-color: $dividerColor;
 	border-bottom: 3px solid $l-dividerColor;
 	border-top: 3px solid $d-dividerColor;
+	position:relative;
+}
+
+.divider-block-text {
+	background-color: $dividerColor;
+	border-bottom: 4px solid $d-dividerColor;
+	border-top: 4px solid $l-dividerColor;
+	border-right: 4px solid $d-dividerColor;
+	border-left: 4px solid $l-dividerColor;
+	position:absolute;
+	margin:0 auto;
+	top: -26px;
+	padding:8px;
+	border-radius:12px;
+	left:40%;
+	width:20%;
+
 }
 
 /* ------------------------*/

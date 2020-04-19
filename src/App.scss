@@ -45,13 +45,7 @@
 	background-position: center;
 }
 .main-screen {
-	background: linear-gradient(
-		rgba($dark-color, .9) 10%,
-		rgba($dark-color, .85) 20%,
-		rgba($dark-color, .75) 40%,
-		rgba($dark-color, .65) 70%,
-		rgba($dark-color, .9) 100%
-	);
+	background: rgba($dd-highlight-color, .75);
 }
 
 .main-page {
@@ -67,10 +61,14 @@
 	color: $dark-color;
 }
 
+.blendBg {
+	color: $l-secondary-color;
+}
+
 .pageDarkSection {
 	text-align: center;
-	background: $dark-color;
-	padding: 40px 20px 80px;
+	background: $d-secondary-color;
+	padding: 20px 20px 80px;
 }
 
 .footer {
@@ -285,26 +283,25 @@
 }
 
 .categoryStyleLink, .categoryStyleLink:hover {
-	background-size: cover;
-	height: 400px;
-	background-position-x: center;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
 	align-content: space-between;
 	border-bottom:4px solid $primary-color;
+	h3 {margin:0;}
+	margin:10px !important;
 }
 
 
 .kindStyleLink, .kindStyleLink:hover {
-	background-size: cover;
-	height:200px;
-	background-position: center center;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
 	align-content: space-between;
 	border-bottom:4px solid $primary-color;
+	h3 {margin:0;}
+	margin:10px !important;
+
 }
 
 .kindStyleName {
@@ -334,9 +331,6 @@
 
 
 .pantheonStyleLink, .pantheonStyleLink:hover {
-	background-size: cover;
-	height:150px;
-	background-position: center center;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;

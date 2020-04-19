@@ -93,11 +93,6 @@ class Categories extends React.Component {
     e.preventDefault()
   }
 
-  image_thumb = (link) => {
-    const linkArr = link.split('/')
-    linkArr.splice(linkArr.length-2, 1, 'h_400')
-    return linkArr.join('/')
-  }
 
 
   render() {
@@ -137,10 +132,7 @@ class Categories extends React.Component {
 
                       <Link className='blockLink categoryStyleLink'
                         to={`/categories/${category.category_id}`}
-                        style={{
-                          backgroundImage: `url(${ this.image_thumb(category.image_url) })`,
-                        }}>
-                          {console.log(this.image_thumb(category.image_url))}
+                        >
 
                         <h3 className="categoryStyleName">{category.category_name} {category.category_number}</h3>
                         <p className="categoryStyleText">{category.category_description}</p>

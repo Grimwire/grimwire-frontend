@@ -1,7 +1,7 @@
 import React from 'react'
 import {withRouter, Link} from 'react-router-dom'
 import axios from 'axios'
-import {Form} from 'react-bootstrap'
+import {Form, Row, Col} from 'react-bootstrap'
 
 import Pagination from '../shared/pagination'
 
@@ -99,22 +99,24 @@ class ResourcesIndex extends React.Component {
         </Form>
         <hr />
         <Pagination pages={this.state.pager.pages} callback={this.goToPage} currentPage={this.state.pager.currentPage} totalPages={this.state.pager.totalPages} />
-
+        <hr/>
+        <Row>
         {
-          this.state.resources.map((resource) => <div>
+          this.state.resources.map((resource) => <Col lg="4" style={{height: '275px'}}><div style={{height: '275px'}}>
             <h3>{resource.resource_title}</h3>
             <a href={`${resource.resource_link}`}>{resource.resource_type} Link</a>
             <p>{resource.resource_description}</p>
             <p>Tags: { (resource.resource_tags || []).map((tag) => <span className="format-link" onClick={this.setTag} data-tag={tag} style={{padding:'5px'}}>{tag}</span> ) }</p>
 
             { curr_user.user_role > 1 ? <Link to={`/resources/${resource.resource_id}/edit`}>Edit</Link> : ""}
-            <hr />
-          </div>)
+            
+          </div></Col>)
 
         }
-        
+        </Row>
+        <hr/>
         <Pagination pages={this.state.pager.pages} callback={this.goToPage} currentPage={this.state.pager.currentPage} totalPages={this.state.pager.totalPages} />
-
+        <hr />
 
         { curr_user.user_role > 1 ? <Link className='nice-button' to={`/resources/new`}>(+) Add A Resource</Link> : ""}
 

@@ -8,10 +8,10 @@
 	width: 100%;
 	z-index: 10;
 	top: 0;
-	background-color: transparent;
+	background: linear-gradient($secondary-color, $d-secondary-color);
 	transition: background-color 100ms linear;
+	border-bottom:10px solid $ll-secondary-color;
 	&:hover {
-		background-color: $dark-color;
 		transition: background-color 100ms linear;
 	}
 
@@ -37,40 +37,40 @@
 	border-bottom: 2px solid $l-primary-color;
 	padding: 10px;
 	border-radius: 10px;
-	display:inline-block;
+	display:flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+
 	&:hover {
 		background-color: rgba($d-primary-color, .7);
 	}
 	& a, & * {
-		color:$light-color;
+		color:$ll-light-color;
 	}
 }
 
 .hmenu-dropdown-toggle {
-	display: inline-block;
 	cursor: pointer;
+}
+.hmenu-dropdown > .hmenu-dropdown-toggle {
+	display:flex;
+	justify-content: space-between;
+	width:100%;
 }
 .hmenu-dropdown-options {
 	left: 0;
 	padding: 20px;
-	max-width: 500px;
+	width:100%;
 	border-radius:20px;
-	background-color: $dark-color;
-	a {
-		display: block;
-	}
+	background-color: $d-secondary-color;
+	
 }
 
 
-.headerFill {
-	background-color: $dark-color;
-}
 
 
 @media only screen and (max-width: 911px) {
-	.header {
-		background: $dark-color;
-	}
+	
 	.hmenu-item {
 		width: 100%;
 		margin:0px;
@@ -89,9 +89,8 @@
 }
 @media only screen and (min-width: 912px) {
 	.hmenu-item {
-		display: inline-block;
-		min-width: 125px;
-		margin: 0 15px;
+		margin: 0 5px;
+		display:inline-block;
 	}
 
 	.hmenu-dropdown {
@@ -102,17 +101,17 @@
 		width: max-content;
 		border-radius: 20px;
 		margin-top:12px;
+		display:block;
 	}
 
 	.hmenu-dropdown-options .hmenu-item {
-		display: flex;
-		justify-content: space-between;
+		display:block;
 		& > span {
 			padding: 5px;
 		}
 	}
 
-	.hmenu-dropdown-toggle > span {
+	.hmenu-dropdown-toggle.hmenu-item > span {
 		padding: 6px;
 	}
 }

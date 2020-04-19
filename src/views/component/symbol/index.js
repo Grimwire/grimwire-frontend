@@ -31,12 +31,12 @@ class Symbol extends React.Component {
 					exit
 				>
 					<div className="">
-						<div key="symbols" className="pageCTA">
+						<div key="symbols" className="midCTA">
 							<div className="container">
-								<h4>Search through our database of topics & objects</h4>
-								<h1>Symbols</h1>
+								<h4>The individual entries of every list</h4>
+								<h1>Items & Entries</h1>
 								<h5>In one way or another, everything is a symbol, everything has meaning</h5>
-								<h3>Our "Symbols" include the items that make up all of our Collections list.</h3>
+								<h5>Here is our complete list for browsing.</h5>
 
 								{curr_user ? <Link to="/symbols/new">+ Create New Symbol</Link> : ''}
 							</div>

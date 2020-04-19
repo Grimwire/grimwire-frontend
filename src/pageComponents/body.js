@@ -12,12 +12,18 @@ import PantheonController from '../views/component/pantheon/controller';
 import KindController from '../views/component/kind/controller';
 import CategoryController from '../views/component/category/controller';
 
+
+import AllController from '../views/component/all/controller';
+
 import PagesController from '../views/pages/pages'
 
 function Body(props) {
     return <div className="body"><div className="page-container">
         <Switch>
             <Route path="/" exact component={Home} />
+
+
+            <Route path="/search" component={AllController} />
 
             <Route path="/symbols" component={SymbolController} />
             <Route path="/pantheons" component={PantheonController} />

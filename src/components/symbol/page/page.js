@@ -80,21 +80,25 @@ class SymbolPage extends React.Component {
 
 
           <BasicInfo item={item} />
-          <ImageGallery item={item} key={item.symbol_id} />
+          {/* Just nah rn
+          <ImageGallery item={item} key={item.symbol_id} /> */}
           <Connections item={item} />
 
 
           <div>
-            <TextOutput text={item.symbol_overview_text} title={'Background'} />
-            <TextOutput text={item.symbol_meaning_text} title={'Meaning'} />
+            {item.symbol_overview_text ? 
+            <TextOutput text={item.symbol_overview_text} title={'Background'} /> : "" }
+             {item.symbol_overview_text ? 
+            <TextOutput text={item.symbol_meaning_text} title={'Meaning'} /> : "" }
           </div>
 
-
+              
           <Resources item={item} />
           <Sources item={item} />
 
-
+          {/* Gotta be experimental, frowny
           <ArticleImageCreator item={item} imageKind={"Correspondences"} />
+          */}
 
 
         </div>

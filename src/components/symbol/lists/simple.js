@@ -13,8 +13,8 @@ function SimpleSymbolList(props) {
 
     const breadStyle = { 
         position: 'absolute', 
-        left: '0', 
-        background: 'black',
+        left: '10px', 
+        background: '',
         marginLeft: '-48px',
         width: '48px'
     }

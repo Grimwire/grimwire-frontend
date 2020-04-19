@@ -12,10 +12,10 @@ class BasicInfo extends React.Component {
 
     return <div>
       <img src={item.thumbnail ? item.thumbnail.image_url : ""}  alt={item.pantheon_name} width="100px"/>
-      <h1>{item.order_number ? item.order_number + ". " : ''} {item.symbol_name}</h1>
+      <h1>{/*item.order_number ? item.order_number + ". " : ''*/}{item.symbol_name}</h1>
 
 
-            <p>{item.symbol_description || "Please fill in."}</p>
+            <p>{item.symbol_description || "Coming Soon"}</p>
               <p><Link to={ `/collections/${item.kind.kind_id}` }> Part of a list of {item.kind.kind_name} </Link></p>
             { item.health_warning ? <h3 className="health-warning">WARNING: {item.health_warning}</h3> : ""}
             

@@ -8,6 +8,7 @@ import Features from './pages/features'
 import PrivacyPolicy from './pages/privacy-policy'
 import MagickStatement from './pages/magick_statement'
 import Shop from './pages/shop'
+import Hall from './pages/hallofinitiates'
 
 
 class Pages extends React.Component {
@@ -27,6 +28,7 @@ class Pages extends React.Component {
             <Route path="/pages/privacy-policy" exact component={PrivacyPolicy} />
             <Route path="/pages/magick-statement" exact component={MagickStatement} />
             <Route path="/pages/shop" exact component={Shop} />
+            <Route path="/pages/hall-of-initiates" exact component={Hall} />
           </Switch>
           <br /> <br /> <br />
         </div>

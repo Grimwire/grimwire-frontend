@@ -3,7 +3,7 @@ import React from 'react'
 const ResourcesList = (props) => {
   const resources = props.item.resources
 
-  return <div><div className="divider" /><div className="text-container">
+  return resources.length > 0 ? <div><div className="divider" /><div className="text-container">
     <h3>Resources</h3>
     <p>A list of articles & links that you can use to explore this topic further</p>
     {
@@ -12,7 +12,7 @@ const ResourcesList = (props) => {
       </a>
       <p>{resource.sr_description}</p></div>)
     }
-  </div><div className="reverse-divider" /></div>
+  </div><div className="reverse-divider" /></div> : ""
 
 }
 

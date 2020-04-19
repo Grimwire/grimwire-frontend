@@ -3,7 +3,7 @@ import React from 'react'
 const SourcesList = (props) => {
   const sources = props.item.sources
 
-  return <div><div className="divider" /><div className="text-container">
+  return sources.length > 0 ? <div><div className="divider" /><div className="text-container">
     <h3>Sources</h3>
     <p>A list of articles & links we used to help write this page</p>
     {
@@ -11,7 +11,7 @@ const SourcesList = (props) => {
         <p>#{i+1}. <u>{source.source_article_title}</u>, <b>{source.source_title}</b> (External Link)</p>
       </a>)
     }
-  </div><div className="reverse-divider" /></div>
+  </div><div className="reverse-divider" /></div> : ""
 
 }
 

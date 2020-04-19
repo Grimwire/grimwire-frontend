@@ -12,7 +12,7 @@ function SmallPantheonCard(props) {
             return linkArr.join('/')
       }
 
-      return <Link to={`/pantheons/${item.pantheon_id}`} style={{ backgroundImage: `url(${item.image_url ? image_thumb(item.image_url) : null})` }} className='blockLink pantheonStyleLink'>
+      return <Link to={`/pantheons/${item.pantheon_id}`} className='blockLink pantheonStyleLink'>
             <Row style={{ width: '100%', height: '100%', marginLeft: '0' }}>
                   <Col lg={3} xs={12} style={{padding:'0'}}>
                         <h3 className="pantheonStyleName">{item.pantheon_name}<br />
@@ -22,7 +22,8 @@ function SmallPantheonCard(props) {
                   </Col>
                   <Col lg={9} xs={12} style={{padding:'0'}}>
                         <p className="pantheonStyleText">
-                                    {item.pantheon_description}
+                        {item.pantheon_description ? item.pantheon_description.substr(0, 128) : "Coming Soon"} {item.pantheon_description && item.pantheon_description.length > 128 ? <span>... [Read More]</span> : ""}
+                          
                         </p>
                   </Col>
             </Row>
