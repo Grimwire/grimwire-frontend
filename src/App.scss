@@ -170,7 +170,7 @@
 }
 
 .connection-row {
-	background-color: $dark-color;
+	background-color: $d-primary-color;
 	width: 100vw;
 	margin: 0;
 	& .col-12 {
@@ -181,15 +181,15 @@
 }
 
 .symbol-connection-area {
-	background-color: $dark-color;
+	background-color: $dd-primary-color;
 	& h3 {
-		background-color: $l-grey-color;
+		background-color: $l-primary-color;
 		padding: 10px;
 		color: $ll-light-color;
 		margin: 0;
 	}
 	& h4 {
-		background: $d-grey-color;
+		background: $d-primary-color;
 		border-top: 4px solid $grey-color;
 		border-bottom: 4px solid $dd-grey-color;
 		margin: 0;

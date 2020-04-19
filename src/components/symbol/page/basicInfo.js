@@ -11,7 +11,7 @@ class BasicInfo extends React.Component {
     const item = this.props.item
 
     return <div>
-      <img src={item.thumbnail ? item.thumbnail.image_url : ""}  alt={item.pantheon_name} width="100px"/>
+      {/*<img src={item.thumbnail ? item.thumbnail.image_url : ""}  alt={item.pantheon_name} width="100px"/>*/}
       <h1>{/*item.order_number ? item.order_number + ". " : ''*/}{item.symbol_name}</h1>
 
 

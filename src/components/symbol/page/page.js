@@ -70,7 +70,7 @@ class SymbolPage extends React.Component {
         </Helmet>
 
 
-          <Link to="/symbols">Search All Symbols</Link>
+          <Link to="/search"><span className="fas fa-search"></span> Search All</Link>
           {curr_user ? <Link to="/symbols/new">Create Symbol</Link> : ""}
           {curr_user ? <Link to={`/symbols/${this.props.match.params.id}/edit`}>Edit This Symbol</Link> : ""}
           
