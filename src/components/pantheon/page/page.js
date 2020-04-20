@@ -67,6 +67,9 @@ class PantheonPage extends React.Component {
 						<div>
 							<Helmet>
 								<title>{`GrimWire.Online- ${item.pantheon_name}- The History of ${item.pantheon_name}`}</title>
+								<meta property="og:title" content={`The History of ${item.pantheon_name}- GrimWire`} />
+    							<meta property="og:description" content={item.pantheon_description} />
+    
 							</Helmet>
 
 							<Link to="/pantheons"><span className="fas fa-caret-left"></span> Back to All Pantheons</Link>{' '}
