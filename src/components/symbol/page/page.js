@@ -63,9 +63,9 @@ class SymbolPage extends React.Component {
         <div>
     
         <Helmet>
-                <title>{`GrimWire.Online- ${item.symbol_name}- All About ${item.kind.kind_name}`}</title>
+                <title>{`GrimWire- ${item.symbol_name}- All About ${item.kind.kind_name}`}</title>
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content={item.symbol_name} />
+                <meta property="og:title" content={ `All About ${item.symbol_name}- ${item.kind.kind_name}- GrimWire` } />
                 <meta property="og:description" content={item.symbol_description} />
         </Helmet>
 

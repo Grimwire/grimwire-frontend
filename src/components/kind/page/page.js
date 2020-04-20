@@ -62,7 +62,9 @@ class KindPage extends React.Component {
               
     
         <Helmet>
-                <title>{`GrimWire.Online- ${item.kind_name}- Information on All ${item.kind_name}`}</title>
+                <title>{`GrimWire- ${item.kind_name}- Information on All ${item.kind_name}`}</title>
+								<meta property="og:title" content={`Information on All ${item.kind_name}- GrimWire`} />
+    						<meta property="og:description" content={item.kind_description} />
         </Helmet>
 
             { curr_user ?  <span><Link to="/collections/new">Create Collection</Link> 

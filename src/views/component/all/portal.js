@@ -4,6 +4,7 @@ import AllRandom from '../../../components/all/index/random'
 import FormInsert from '../../../components/forms/handler'
 import {defaultKind} from '../../../db/defaultObjects'
 import {Link} from 'react-router-dom'
+import Helmet from 'react-helmet'
 import {CSSTransition, SwitchTransition} from 'react-transition-group'
 
 class Kind extends React.Component {
@@ -19,6 +20,13 @@ class Kind extends React.Component {
   return (<SwitchTransition><CSSTransition key={`kinds`}
     in={true} timeout={350} classNames="whole-page" unmountOnExit appear enter exit><div className="">
     <div key='kinds' className="midCTA">
+
+          
+    <Helmet>
+                            <title>GrimWire- Portal of Chaos- Random Articles</title>
+                <meta property="og:title" content={ `Welcome to GrimWire's "Portal of Chaos"- Random Articles` } />
+               
+                </Helmet>
         <div className="container">
           <h2>The Portal<br />Of Chaos</h2>
           <h6>A few random pages from our database.</h6>

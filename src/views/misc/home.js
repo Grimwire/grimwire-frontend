@@ -3,32 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function Home(props) {
-	const popCollections = [
-		{ name: 'Astrology Signs', id: 3 },
-		{ name: 'Planets', id: 12 },
-		{ name: 'Elements', id: 11 },
-		{ name: 'Crystals', id: 9 },
-		{ name: 'Chakras', id: 4 },
-		{ name: 'Tarot Cards', id: 1 },
-		{ name: 'All', id: '' }
-	];
-
-	const popClasses = [
-		{ name: 'Magick (101)', id: 2 },
-		{ name: 'Beings & Creatures (108)', id: 17 },
-		{ name: 'Magick Correspondences (110)', id: 19 },
-		{ name: 'Tarot Reading (151)', id: 14 },
-		{ name: 'Tarot & The Sepiroth (211)', id: 18 },
-		{ name: 'All', id: '' }
-	];
-
-	const popPantheons = [
-		{ name: 'Wicca', id: 5 },
-		{ name: 'Thelema', id: 49 },
-		{ name: 'Paganism', id: 60 },
-		{ name: 'Chaos Magick', id: 61 },
-		{ name: 'All', id: '' }
-	];
+	
 	return (
 		<div>
 			<div className="midCTA">

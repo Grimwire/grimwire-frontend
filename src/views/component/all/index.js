@@ -5,6 +5,7 @@ import FormInsert from '../../../components/forms/handler'
 import {defaultKind} from '../../../db/defaultObjects'
 import {Link} from 'react-router-dom'
 import {CSSTransition, SwitchTransition} from 'react-transition-group'
+import Helmet from 'react-helmet'
 
 class Kind extends React.Component {
   constructor(props) {
@@ -19,6 +20,14 @@ class Kind extends React.Component {
   return (<SwitchTransition><CSSTransition key={`kinds`}
     in={true} timeout={350} classNames="whole-page" unmountOnExit appear enter exit><div className="">
     <div key='kinds' className="lowCTA">
+      
+    <Helmet>
+                            <title>GrimWire- Search Magick & Witchcraft Ingredients & Correspondences</title>
+                <meta property="og:title" content={ `GrimWire- Search Magick & Witchcraft Ingredients & Correspondences` } />
+               
+                </Helmet>
+
+
         <div className="container">
 				  <Link className="" to="/search/portal-of-chaos">Or... Try Some Random Pages Instead?</Link>
           <h2>Search GrimWire</h2>

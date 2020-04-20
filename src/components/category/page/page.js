@@ -63,7 +63,9 @@ class CategoryPage extends React.Component {
 
 					
 			<Helmet>
-                <title>{`GrimWire.Online- ${item.category_name} ${item.category_number}`}</title>
+                <title>{`GrimWire- ${item.category_name} ${item.category_number}`}</title>
+                <meta property="og:title" content={ `${item.category_name} ${item.category_number}- Classes & Categories- GrimWire` } />
+                <meta property="og:description" content={item.category_description} />
         </Helmet>
 
 						

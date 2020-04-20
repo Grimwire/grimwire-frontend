@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form } from 'react-bootstrap'
+import Helmet from 'react-helmet'
 
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
 
@@ -38,6 +39,12 @@ class Pages extends React.Component {
             <CSSTransition key={`shop`} in={true} timeout={350} classNames="whole-page" unmountOnExit appear enter exit>
                 <div key="shop" style={{ minHeight: "100vh" }}>
 
+                    <Helmet>
+                            <title>GrimWire- Witchy and Occult Shop</title>
+                <meta property="og:title" content={ `GrimWire- Witchy and Occult Shop` } />
+                <meta property="og:description" content="We offer links to places around the web that have the materials & supplies you need. We try to find the best quality products, with great reviews, while remaining affordable." />
+                
+                </Helmet>
 
                     <div className="text-container">
                         <h3>Choose your wares... if you dare.</h3>

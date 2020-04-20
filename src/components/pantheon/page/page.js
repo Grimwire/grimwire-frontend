@@ -66,7 +66,7 @@ class PantheonPage extends React.Component {
 					{typeof item !== 'undefined' && Object.keys(item).length > 0 && !this.state.loading ? (
 						<div>
 							<Helmet>
-								<title>{`GrimWire.Online- ${item.pantheon_name}- The History of ${item.pantheon_name}`}</title>
+								<title>{`GrimWire- ${item.pantheon_name}- The History of ${item.pantheon_name}`}</title>
 								<meta property="og:title" content={`The History of ${item.pantheon_name}- GrimWire`} />
     							<meta property="og:description" content={item.pantheon_description} />
     
