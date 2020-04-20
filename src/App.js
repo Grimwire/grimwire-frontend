@@ -36,9 +36,6 @@ class App extends React.Component {
 				<div className="main-screen">
 					<Helmet>
                 		<title>{`GrimWire- The Online Grimoire & Encyclodpedia`}</title>
-						<meta property="og:image" content={require('../../img/metaimage.png')} />
-						<meta property="og:title" content="GrimWire- The Online Grimoire & Encyclodpedia" />
-						<meta property="og:description" content="1000's of items- from crystals to herbs to deities- free online grimoire & encyclopedia for witchy folks." />
         			</Helmet>
 					<Header auth={{ curr_user: this.state, logout: this.logout, login: this.login }} />
 					<Body auth={{ curr_user: this.state, logout: this.logout, login: this.login }} />
