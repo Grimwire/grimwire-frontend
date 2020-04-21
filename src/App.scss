@@ -181,17 +181,18 @@
 }
 
 .symbol-connection-area {
-	background-color: $dd-primary-color;
+	background-color: $dd-secondary-color;
 	& h3 {
-		background-color: $l-primary-color;
+		background-color: $d-secondary-color;
 		padding: 10px;
-		color: $ll-light-color;
+		color: $ll-secondary-color;
 		margin: 0;
+		border-top: 2px solid $grey-color;
+		border-bottom: 2px solid $dd-grey-color;
+		
 	}
 	& h4 {
 		background: $d-primary-color;
-		border-top: 4px solid $grey-color;
-		border-bottom: 4px solid $dd-grey-color;
 		margin: 0;
 		& a {
 			font-size: inherit;

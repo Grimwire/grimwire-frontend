@@ -69,8 +69,7 @@ class SymbolPage extends React.Component {
                 <meta property="og:description" content={item.symbol_description} />
         </Helmet>
 
-
-          <Link to="/search"><span className="fas fa-search"></span> Search All</Link>
+          <Link to={`/collections/${item.kind.kind_id}`}><span className='fas fa-caret-left'></span> Back to {item.kind.kind_name}</Link>
           {curr_user ? <Link to="/symbols/new">Create Symbol</Link> : ""}
           {curr_user ? <Link to={`/symbols/${this.props.match.params.id}/edit`}>Edit This Symbol</Link> : ""}
           
@@ -84,12 +83,14 @@ class SymbolPage extends React.Component {
           <ImageGallery item={item} key={item.symbol_id} /> */}
           <Connections item={item} />
 
+          <div className="reverse-divider"></div>
 
           <div>
             {item.symbol_overview_text ? 
             <TextOutput text={item.symbol_overview_text} title={'Background'} /> : "" }
              {item.symbol_overview_text ? 
             <TextOutput text={item.symbol_meaning_text} title={'Meaning'} /> : "" }
+            
           </div>
 
               

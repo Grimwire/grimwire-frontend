@@ -9,6 +9,7 @@ import ImageGallery from '../../imageGallery/gallery'
 import Sources from '../../sources/sourcesList'
 import {CSSTransition, SwitchTransition} from 'react-transition-group'
 
+import TextOutput from '../../shared/textOutput';
 
 
 const curr_user = localStorage.user ? JSON.parse(localStorage.user) : false
@@ -84,9 +85,35 @@ class KindPage extends React.Component {
             <BasicInfo item={item}>
               {/*<ImageGallery item={item} key={item.kind_ids}/>*/}
             </BasicInfo>
-
+            <div className="divider"></div>
             <SymbolList item={item} updatePage={this.updatePage} />
+            <div className="reverse-divider"></div>
+            
+            <TextOutput text={item.kind_application_theory_text} title={'Theory & Application'} />
+      <TextOutput text={item.kind_background_history_text} title={'History & Overview'} />
 
+     { item.kind_application_theory_text || item.kind_background_history_text ? 
+          <div className="reverse-divider"></div> : "" }
+
+
+      <div className="text-container">
+        <h3>Additional Information</h3>
+        <p>{item.kind_name} were created by the following tradition:<br />
+        <Link to={`/pantheons/${item.pantheon_id}`}>{item.pantheon_name}</Link></p>
+            <hr />
+        {/* item.pantheons.length > 0 ? <div>
+          <h3>Used by the following Traditions: </h3>
+          {item.pantheons.map(i =>
+            <Link key={i.pantheon_id} to={`/pantheons/${i.pantheon_id}`}>{console.log(i)}{i.pantheon_name}</Link>
+          )}
+          </div> : ""*/}
+
+        {item.categories.length > 0 ? <p>We include {item.kind_name} in the following classes and categories:</p> : ""}
+        {item.categories.map(category => <div>
+          <Link to={`/categories/${category.category_id}`}>- {category.category_name} {category.category_number}</Link>
+        </div>)}
+<br />
+      </div>
             <Sources item={item} />
 
       </div> : ( this.state.loading ?

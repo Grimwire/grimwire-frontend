@@ -71,19 +71,20 @@ class BasicInfo extends React.Component {
   render() {
     const item = this.props.item
 
-    return <div>
-      <div className="divider" />
-      <h2>Complete List of {item.kind_name} & their Correspondences</h2>
-      <table className="extra-info-slider">
-        <tr className="extra-info-row">
-          {item.specific_order ?
+    return <div className="pageDarkSection">
+      
+      <h3>Complete List of {item.kind_name} & their Correspondences</h3>
+      <p>Click on one to see more information.</p>
+      <div className="">
+        <div className="">
+          {/*item.specific_order ?
             <td className={`extra-info-column ${this.state.sort === 'order_number' ? 'eic-active' : ''}`} onClick={this.sortNumber} >
               # {this.state.sort === 'order_number' ? (this.state.sortdir > 0 ? <i class="far fa-caret-square-up"></i> : <i class="far fa-caret-square-down"></i>) : ""}
             </td>
             : ""}
 
           <td className={`extra-info-column ${this.state.sort === 'symbol_name' ? 'eic-active' : ''}`} onClick={this.sortName} >
-            Name {this.state.sort === 'symbol_name' ? (this.state.sortdir > 0 ? <i class="far fa-caret-square-up"></i> : <i class="far fa-caret-square-down"></i>) : ""}
+          Name {this.state.sort === 'symbol_name' ? (this.state.sortdir > 0 ? <i class="far fa-caret-square-up"></i> : <i class="far fa-caret-square-down"></i>) : ""}
           </td>
 
           {
@@ -99,19 +100,20 @@ class BasicInfo extends React.Component {
 
           {item.default_extra_info ? Object.entries(item.default_extra_info).map((entry) =>
             <td className={`extra-info-column ${this.state.sort === entry[0] ? 'eic-active' : ''}`} key={entry[0]} onClick={this.sortOther} sortTerm={entry[0]}>
-              {/*Replaces underscores with spaces and capitalizes each word*/}
+              {/*Replaces underscores with spaces and capitalizes each word*/}{/*
               {entry[0].replace(/_/g, ' ').replace(/(?: |\b)(\w)/g, function (key) { return key.toUpperCase() })}
               {this.state.sort === entry[0] ? (this.state.sortdir > 0 ? <i class="far fa-caret-square-up"></i> : <i class="far fa-caret-square-down"></i>) : ""}
             </td>) : ""}
 
         </tr>
-
-
+      */}
+  <hr />
         {
           item.symbols.map(symbol => <SymbolRow key={symbol.symbol_id} item={item} symbol={symbol} updatePage={this.props.updatePage} />)
         }
 
-      </table>
+      </div>
+    </div>
     </div>
   }
 }

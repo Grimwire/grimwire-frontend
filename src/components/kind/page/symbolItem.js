@@ -21,12 +21,12 @@ class BasicInfo extends React.Component {
   render() {
     const item = this.props.item
     const symbol = this.props.symbol
-    return !this.state.showForm ? <tr className="extra-info-row" key={symbol.symbol_id}>
-
+    return !this.state.showForm ? <div className="" key={symbol.symbol_id}>
+{/*
         {item.specific_order ? <td className="extra-info-column">{symbol.order_number}. </td> : ""}
-
-        <td className="extra-info-column"><Link to={`/symbols/${symbol.symbol_id}`}>{symbol.symbol_name}</Link></td>
-
+*/}
+        <div className=""><h4><Link to={`/symbols/${symbol.symbol_id}`}>{symbol.symbol_name}</Link></h4></div>
+{/*
         {item.kindInfoKinds.map(infoKind => <td className="extra-info-column" key={infoKind.kind_name}> 
           {  
             symbol.connections.map(connection => connection.kind_name === infoKind.kind_name ? 
@@ -40,13 +40,13 @@ class BasicInfo extends React.Component {
               <td className="extra-info-column" key={entry[0]}> {  symbol.extra_info[entry[0]] } </td>
           ) : ""}
 
-        {/*<td className="extra-info-column">
+        <td className="extra-info-column">
           <ImageModal item={symbol} size={'32px'} />
-        </td>*/}
+        </td>
 
 
-        <td className="extra-info-column"><button onClick={this.toggleForm}>{this.state.showForm ? "Done" : "Edit" }</button></td>
-      </tr> : <div>
+        <div className="extra-info-column"><button onClick={this.toggleForm}>{this.state.showForm ? "Done" : "Edit" }</button></div>*/}
+      </div> : {/*<div>
         <div key={symbol.symbol_id} className="inlineForm">
           <MainHandler item={{
               order_number: symbol.order_number,
@@ -56,8 +56,8 @@ class BasicInfo extends React.Component {
             }}
             editId={symbol.symbol_id} existing={true} formClass={"symbols"} update={this.toggleForm} />
           <button className="extra-info-column" onClick={this.toggleForm}>{this.state.showForm ? "Done" : "Edit" }</button>
-        </div>
-      </div> 
+          </div>
+      </div>  */}
   }
 }
 

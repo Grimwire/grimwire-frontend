@@ -10,7 +10,7 @@ const SourcesList = (props) => {
       sources.map((source, i) => <a target="_blank" href={source.source_link}>
         <p>#{i+1}. <u>{source.source_article_title}</u>, <b>{source.source_title}</b> (External Link)</p>
       </a>)
-    }
+    }<br /><br /><br />
   </div><div className="reverse-divider" /></div> : ""
 
 }

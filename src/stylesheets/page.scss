@@ -37,7 +37,7 @@
 }
 
 .text-block-title {
-	background-color:$d-primary-color;
+	background-color:$d-secondary-color;
 	padding:10px;
 	margin:0;
 	text-decoration: underline;
@@ -47,7 +47,7 @@
 
 .text-block-content {
 	padding:20px;
-	background-color:$dark-color;
+	background-color:$dd-secondary-color;
 	& > * {	
 		max-width:800px;
 		margin-left: auto;

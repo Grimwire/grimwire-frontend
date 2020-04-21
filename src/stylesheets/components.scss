@@ -70,11 +70,11 @@ a, .format-link {
 	cursor: pointer;
 	color: $linkColor;
 	text-decoration: none;
-	padding: 10px;
-	margin: 5px;
-	border-radius: 10px;
+	padding:2px 10px;
+	margin:2px;
+	border-radius:10px;
 	display: inline-block;
-	background: linear-gradient(rgba($light-color, .11) 3%, transparent 70%, rgba($light-color, .25));
+	background: linear-gradient( rgba($light-color, .4), transparent, transparent, transparent, rgba($light-color, .2));
 	&:hover {
 		background: rgba($d-primary-color, .7);
 		color: $ll-light-color;

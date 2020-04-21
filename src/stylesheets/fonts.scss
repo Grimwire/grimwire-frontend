@@ -33,7 +33,7 @@ h1 {
 
 h2 {
 	@include h-tag;
-	font-size: 32px;
+	font-size: 28px;
 }
 h3 {
 	@include h-tag($color: $l-light-color);

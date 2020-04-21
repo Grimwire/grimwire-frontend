@@ -8,23 +8,15 @@ function Home(props) {
 		<div>
 			<div className="midCTA">
 				<div>
-					<img height="100px" alt="logo" src={require('../../img/logo.png')} />
+					<h1 className="">GrimWire</h1>
+					<p className="">The Online Magick, Witchraft, and Spirituality Grimoire</p>
+	{/*<img height="100px" alt="logo" src={require('../../img/logo.png')} />*/}
 
-					<h3 className="d-block d-lg-none">The Online Magick, Witchraft, and Spirituality Grimoire</h3>
-					<h1 className="d-none d-lg-block">The Online Magick, Witchraft,<br /> and Spirituality Grimoire</h1>
-
+<br /><br />
 					<form action="/search" method="get">
-						<span className='fas fa-search'></span>&nbsp;
 						<input style={{ padding: '5px', color: 'black', width: '80%', borderRadius: "10px" }} type='text' placeholder="Search the whole site..." name="searchTerm"></input>
+						<button type="submit">Search It! <span className='fas fa-search'></span></button>
 					</form>
-
-
-
-					<h5>Try:</h5>
-					<p>What's your astrological sign?</p>
-					<p>What's your favorite crystal?</p>
-					<p>What deity are you curious about?</p>
-					<p>What kind of spell do you want to make?</p>
 				</div>
 			</div>
 
@@ -38,24 +30,19 @@ function Home(props) {
 				<br className="d-none d-lg-block" />
 				<Row>
 					<Col xs={12} lg={4}>
-						<Link className="nice-button" to="/search/portal-of-chaos">Enter the Portal of Chaos</Link>
-						<p class="button-text">Jump to a page of random articles.</p>
+						<Link className="nice-button" to="/search/portal-of-chaos">The Portal of Chaos</Link>
 					</Col>
 					<Col xs={12} lg={4}>
-						<Link className="nice-button" to="/pages/hall-of-initiates">Visit the Hall of Initiates</Link>
-						<p class="button-text">For beginners who don't know where to start.</p>
+						<Link className="nice-button" to="/pages/hall-of-initiates">The Hall of Initiates</Link>
 					</Col>
 					<Col xs={12} lg={4}>
-						<Link className="nice-button" to="/users/register">Create An Account</Link>
-						<p class="button-text">Support our mission by creating your account & joining the mailing list.</p>
+						<Link className="nice-button" to="/users/register">Help Us With Your Support</Link>
 					</Col>
 					<Col xs={12} lg={6}>
 						<Link className="nice-button" to="/pages/mission">Our History</Link>
-						<p class="button-text">How we came about & who makes up our team.</p>
 					</Col>
 					<Col xs={12} lg={6}>
 						<Link className="nice-button" to="/resources">External Resources</Link>
-						<p class="button-text">Our allies & other external resources.</p>
 					</Col>
 				</Row>
 			</div>
