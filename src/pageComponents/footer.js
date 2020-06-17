@@ -9,12 +9,12 @@ function Footer() {
         </h1>
 
         <div>
-        <NavLink to="/">Home</NavLink><br />
-        <NavLink to="/pages/shop">Shop</NavLink> <br />
-        <NavLink to="/feedback/provide">Contact/Report</NavLink> <br />
-        </div>
+        <NavLink to="/">Home</NavLink> 
+        <NavLink to="/pages/shop">Shop</NavLink> 
+        <NavLink to="/feedback/provide">Contact Us</NavLink> 
+        </div><br />
         
-        <NavLink to="/pages/privacy-policy">Our Privacy Policy</NavLink><br />
+        <NavLink to="/pages/privacy-policy">Our Privacy Policy</NavLink><br /><br />
         <a href="https://www.google.com/policies/privacy/partners/">How Google Analytics uses data when you use our app</a><br />
       
         

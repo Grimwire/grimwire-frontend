@@ -9,6 +9,7 @@
 //links- sets the dropdown
 
 export default  [,
+    {name: "Home", view: "all", link: '/', symbol: "home"},
     {name: "Search", view: "all", link: '/search', symbol: "search"},
     {name: "Portal of Chaos", view: "all", link: '/search/portal-of-chaos', symbol: "question"},
     {name: "For Beginners", view: "all", link: '/pages/hall-of-initiates', symbol: "star"},

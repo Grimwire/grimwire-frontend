@@ -66,11 +66,9 @@ class Kinds extends React.Component {
     }
 
     changeSort = (e) => {
-      const sort = e.target.attributes.sortTerm.value
-      if(sort === this.state.sort) { this.toggleSortDir() }
+      this.toggleSortDir() 
       let params = this.state.params
-      params.set('sort', sort)
-      this.setState({ sort, update:true, params })
+      this.setState({ update:true, params })
       window.history.replaceState({}, "", window.location.pathname + '?' + params.toString());
     }
 
@@ -110,14 +108,22 @@ class Kinds extends React.Component {
 
     render() {
       return <div className="container" id="kindSearch">
+
+
+
             <div className="componentSearchBar">
-              <button className={`page-button ${this.state.sort === 'kind_name' ? 'page-button-active' : "" }`} onClick={this.changeSort} sortTerm={"kind_name"} >
-                Sort Alphabetically { this.state.sort === 'kind_name' ? this.state.sortdir === "ASC" ? "(A-Z)" : "(Z-A)" : "" }
+
+
+            <input className="page-field" type='text' onChange={this.handleChange} type="text"
+                name="search" placeholder="Search the site"
+                value={this.state.searchTerm} />
+              
+              
+              <button className={'page-button page-button-active'} onClick={this.changeSort} sortTerm={""} >
+                Sort Alphabetically {this.state.sortdir === "ASC" ? "(A-Z)" : "(Z-A)" }
               </button>
 
-              <input className="page-field" type='text' onChange={this.handleChange} type="text"
-                name="search" placeholder="Search by name"
-                value={this.state.searchTerm} />
+              
             </div>
 
             <div style={{display: this.state.loading && this.state.kinds.length !== 0 ? "block" : "none"}} className="loader"><img className="loaderImg" src={require('../../../img/yyloader.gif')} /></div>
