@@ -13,45 +13,50 @@ class Pages extends React.Component {
 
     render() {
         return <SwitchTransition><CSSTransition key={`help`}
-          in={true} timeout={350} classNames="whole-page" unmountOnExit appear enter exit><div key="help" style={{minHeight:"100vh"}}>
-        <h1>Help Us Out</h1>
-        <h3>Hey, I'm Jordan!</h3>
-        <p>I have a few close friends helping out with minor things here and there, and I'm trying to get an awesome
-            group of people together to really get the word out, and ball rolling.</p>
-        <p>I've invested hundreds of hours of development time into this project. I have tons more ideas to code in, too!
-            I am welcoming anyone who wants to
-            invest their time to join the team (no matter how loosely) and lend a hand!
-        </p>
+          in={true} timeout={350} classNames="whole-page" unmountOnExit appear enter exit>
+              <div className="">
+              
+        <div key="help"  className="lowCTA">
 
-        <h3>In General; Most Important</h3>
-        <h5>Writers</h5>
-        <p>A Tarot Adept</p>
-        <p>Angel/healing/chakra/reiki Adept</p>
-        <p>Runes/Wicca/Norse Adept</p>
-        <h5>Sharers</h5>
-        <p>Share links, articles, and images on social media. Meme it up!</p>
+          <div className="container">
+            <h4></h4>
+            <h2>Frequently Asked Questions</h2>
+            <p>In doubt? Ask us <a href="#">here</a>!</p>
 
-        <h3>Tech</h3>
-        <h5>Designers</h5>
-        <p>A solid logo would be sweet</p>
-        <p>General design for components/pages around the site</p>
-        <h5>Testers</h5>
-        <p>Break 'em, that's all.</p>
-        <h5>Programmers</h5>
-        <p>Frontend built on React and SASS, backend built on Node & Express.</p>
-        <p>If you don't know those, I need plenty of help writing HTML/CSS and SQL</p>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="pageDarkSection">
 
-        <h3>Business</h3>
-        <h5>Copywriting/Marketing</h5>
-        <p>Help me spruce up this wording a bit</p>
-        <h5>Marketing/Product Development</h5>
-        <h5>Advertising/Promotion</h5>
-        <p>Help me share links</p>
 
-        <Link to="/feedback/provide" className="nice-button">Get in Contact</Link>
-        <br /><i>-Via feedback form, select "Other"</i>
-
-        </div></CSSTransition></SwitchTransition>
+            <h3>Wait, what exactly is this?</h3>
+            <p>This is an online Grimoire, containing 1000's of magickal, witchy, spiritual, and religious items and articles.</p>
+            
+            <h3>Why did you make this?</h3> 
+            <p>It was made because there are no good </p>
+            
+            <h3>Who are you?</h3>
+            <p>We are GrimWire, founded by Jordan Hubbard, a magick practitioner & spiritual philosopher. He also has a background
+                in technology & web development, and intially created this as a tool for personal use, but has decided to polish and
+                release it under GrimWire.</p>
+            
+            <h3>Is there anyone I can contact with questions I have?</h3>
+            <p>Sure thing! You can reach us <a href="#">here</a>.</p> 
+            
+            <h3>Are you looking for help?</h3> 
+            <p>Yes! We are looking for many different sorts of volunteers. Please go <a href="#">here</a>!</p>
+            
+            <h3>Isn't xxx cultural appropriation?</h3>
+            <p>We take providing accurate & respectful information seriously, but's possible. 
+                If you see something that is inaccurate, harmful, or is misinformation, 
+                please contact us <a href="#">here</a> to get it resolved immediately.</p>
+            
+            <h3>Is this information wrong?</h3>
+            <p>There's certainly a chance either way. We aren't perfect, and have a huge database that has been contributed to by
+                many people. If you see something you think is an error, please contact us <a href="#">here.</a>.</p>
+        </div>
+        </div>
+        </CSSTransition></SwitchTransition>
 
     }
 }

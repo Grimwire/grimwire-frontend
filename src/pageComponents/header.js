@@ -41,20 +41,21 @@ class Header extends React.Component {
 
     return <div className={`header ${this.state.showDropdown ? 'headerFill' : ""}`}>
 
-        <Row style={{width:'100%'}}>
+        <Row style={{width:'100%', margin: 0}}>
           <Col xs={12} lg={2} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div style={{width: '60px'}}>
-            <NavLink to="/" style={{background:'none'}}><img alt="logo" height="50px" src={require('../img/logo.png')} /></NavLink>
+            <div>
+            <NavLink to="/" style={{background:'none', margin:0, padding:0}}><img alt="logo" height="50px" src={require('../img/logo.png')} /></NavLink>
             </div>
+            {/*
             <div className="social-media d-lg-none">
               <a href="https://youtube.com/grimwire" target="_blank"><span className="fab fa-youtube"></span></a>
               <a href="https://facebook.com/grimwire" target="_blank"><span className="fab fa-facebook"></span> </a>
               <a href="https://instagram.com/grimwirex" target="_blank"><span className="fab fa-instagram"></span> </a>
               <a href="https://etsy.com/shop/grimwirewitchyjewels" target="_blank"><span className="fab fa-etsy"></span></a>
-            </div>
-            <div style={{width: '60px'}}>
-            <span style={{color:'white'}} className='fas fa-bars hmenu-mobile-toggle d-inline d-lg-none' onClick={this.toggleMenu}></span>
-            <div className="hmenu-mobile-toggle d-lg-none">Menu</div>
+            </div>*/}
+            <div>
+            <span style={{color:'white', fontSize:'24px'}} className='fas fa-bars hmenu-mobile-toggle d-inline d-lg-none' onClick={this.toggleMenu}></span>
+            <div className="hmenu-mobile-toggle d-lg-none"></div>
             </div>
           </Col>       
 
@@ -63,12 +64,13 @@ class Header extends React.Component {
           </Col>
 
           <Col xs={12} lg={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          {/*
           <div className="social-media d-none d-lg-block">
               <a href="https://youtube.com/grimwire" target="_blank"><span className="fab fa-youtube"></span></a>
               <a href="https://facebook.com/grimwire" target="_blank"><span className="fab fa-facebook"></span> </a>
               <a href="https://instagram.com/grimwirex" target="_blank"><span className="fab fa-instagram"></span> </a>
               <a href="https://etsy.com/shop/grimwirewitchyjewels" target="_blank"><span className="fab fa-etsy"></span></a>
-            </div>
+          </div>*/}
             </Col>   
         </Row>
 

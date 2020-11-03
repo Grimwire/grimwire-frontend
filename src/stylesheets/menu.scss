@@ -10,7 +10,8 @@
 	top: 0;
 	background: linear-gradient($secondary-color, $d-secondary-color);
 	transition: background-color 100ms linear;
-	border-bottom:10px solid $ll-secondary-color;
+	border-bottom:3px solid $l-secondary-color;
+	box-shadow: 0 4px 8px $dark-color;
 	&:hover {
 		transition: background-color 100ms linear;
 	}

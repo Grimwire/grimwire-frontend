@@ -4,17 +4,19 @@ import {NavLink, Link} from 'react-router-dom'
 function Footer() {
     return <div className="footer">
       
-        <h1>
-          GRIMWIRE  
-        </h1>
+        <h3>
+          GrimWire's
+          Online Grimoire  
+        </h3>
 
-        <div>
-        <NavLink to="/">Home</NavLink> 
-        <NavLink to="/pages/shop">Shop</NavLink> 
-        <NavLink to="/feedback/provide">Contact Us</NavLink> 
-        </div><br />
+        <NavLink to="/">Home</NavLink><br />
+        <a href="#">Contact Us</a><br />
+        <a href="#">GrimWire HQ</a><br />
+        <NavLink to="/users/login">Admin Login</NavLink> 
         
-        <NavLink to="/pages/privacy-policy">Our Privacy Policy</NavLink><br /><br />
+        <br />
+        
+        <NavLink to="/pages/privacy-policy">Our Privacy Policy</NavLink><br />
         <a href="https://www.google.com/policies/privacy/partners/">How Google Analytics uses data when you use our app</a><br />
       
         
