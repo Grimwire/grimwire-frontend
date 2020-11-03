@@ -12,11 +12,11 @@ export default  [,
     {name: "Search", view: "all", link: '/search', symbol: "search"},
     {name: "Random Articles", view: "all", link: '/search/portal-of-chaos', symbol: "asterisk"},
     {name: "Help & FAQs", view: "all", link: '/pages/help', symbol: "question"},
-    {name: "Account", view: "no_user", symbol: "user", links: [
+    /*{name: "Account", view: "no_user", symbol: "user", links: [
         {name: "Register", view: "all", link: '/users/register', symbol: ""},
         {name: "Login", view: "all", link: '/users/login', symbol: ""},
         {name: "Forgot My Password", view: "all", link: '/users/forgottenPassword', symbol: ""},
-    ]},
+    ]},*/
     {name: "Your Account", view: "logged_in", symbol: "user", links: [
         {name: "User List", view: 'admin', link: '/admin/users', symbol: "users"},
         {name: "Logs", view: 'admin', link: '/admin/logs', symbol: "cogs"},
