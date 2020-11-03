@@ -11,8 +11,10 @@ function Footer() {
 
         <NavLink to="/">Home</NavLink><br />
         <a href="#">Contact Us</a><br />
+        <a href="#">Shop</a><br />
         <a href="#">GrimWire HQ</a><br />
-        <NavLink to="/users/login">Admin Login</NavLink> 
+        <NavLink to="/users/login">Admin Login</NavLink><br />
+        <a href="#">Sign Up for the Mailing List to recieve Updates & Giveaways</a><br />
         
         <br />
         

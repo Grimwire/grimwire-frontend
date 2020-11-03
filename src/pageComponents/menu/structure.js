@@ -17,6 +17,7 @@ export default  [,
         {name: "Login", view: "all", link: '/users/login', symbol: ""},
         {name: "Forgot My Password", view: "all", link: '/users/forgottenPassword', symbol: ""},
     ]},*/
+    {name: "Get Updates", view: "no_user", remoteLink: "http://www.www.com", symbol: 'star'},
     {name: "Your Account", view: "logged_in", symbol: "user", links: [
         {name: "User List", view: 'admin', link: '/admin/users', symbol: "users"},
         {name: "Logs", view: 'admin', link: '/admin/logs', symbol: "cogs"},
